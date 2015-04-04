@@ -30,3 +30,10 @@ Create an API controller to send JSON of users.  Add a basic index of other user
 
 ## Bonus Features
 - [ ] Have demo login button
+- [ ] Forgot password functionality
+- [ ] Sign in with facebook
+- [ ] View visitors
+- [ ] Sidebar - You might like (links to profiles)
+- [ ] Questions for better matches
+- [ ] Colored line at bottom of user index items (based on responsiveness)
+- [ ] Interactive introduction to the site
