@@ -3,10 +3,10 @@
 ## Minimum Viable Product
 - [ ] Create an account
 - [ ] Create a session
-- [ ] View profile
+- [ ] View own profile
 - [ ] Edit profile
 - [ ] Find matches
-- [ ] View other users' pages
+- [ ] View other users' profiles
 - [ ] 'Like' other users
 - [ ] Read messages in inbox
 - [ ] Compose/Send messages to other users
