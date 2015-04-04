@@ -5,12 +5,13 @@
 - [ ] Create a session
 - [ ] View own profile
 - [ ] Edit profile
-- [ ] Find matches
+- [ ] View matches
 - [ ] View other users' profiles
 - [ ] 'Like' other users
-- [ ] Read messages in inbox
+- [ ] View messages inbox
+- [ ] View an individual message in inbox
 - [ ] Compose/Send messages to other users
-- [ ] Search for users by attributes (age, gender, weight class, etc)
+- [ ] Search for users on match page by attributes (age, gender, weight class, etc)
 
 ## Design Documents
 * [View wireframes][views]
@@ -28,4 +29,3 @@ Implement basic user authentication features in Rails.  Create a simple form for
 Create an API controller to send JSON of users.  Add a basic index of other users (to become the 'matches' page later).  Add a basic profile page that the items in the user index link to.
 
 ## Bonus Features
-
