@@ -29,3 +29,4 @@ Implement basic user authentication features in Rails.  Create a simple form for
 Create an API controller to send JSON of users.  Add a basic index of other users (to become the 'matches' page later).  Add a basic profile page that the items in the user index link to.
 
 ## Bonus Features
+- [ ] Have demo login button
