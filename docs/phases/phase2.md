@@ -1,4 +1,4 @@
-# Phase One: User Creation, Authentication, Profile Form
+# Phase Two: Viewing Matches, Viewing Profiles
 
 ## Rails
 ### Models
