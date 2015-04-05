@@ -2,18 +2,13 @@
 
 ## Rails
 ### Models
-* User
-* Profile
+* user
 
 ### Controllers
-* UsersController (create, new)
+* UsersController (create, new, show)
 * SessionController (create, new, destroy)
-* ProfilesController (create, new, show)
 
 ### Views
-* users/new.html.erb
-* session/new.html.erb
-* shared/_profile_form.html.erb
 
 ## Backbone
 ### Models
@@ -21,5 +16,9 @@
 ### Collections
 
 ### Views
+* users/new.html.erb
+* users/show.html.erb
+* session/new.html.erb
+* profiles/show.html.erb
 
 ## Gems/Libraries
