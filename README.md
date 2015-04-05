@@ -45,6 +45,7 @@ Implement the 'Message' model in Rails.  Add API routes to view an index of or c
 - [ ] Have demo login button
 - [ ] Forgot password functionality
 - [ ] Sign in with facebook
+- [ ] Bookmark other users
 - [ ] View visitors
 - [ ] Sidebar - You might like (links to profiles)
 - [ ] Questions for better matches
