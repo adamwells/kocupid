@@ -10,7 +10,7 @@
 ![matches]
 
 ## Users Index Item
-![users_index_item]
+![users-index-item]
 
 ## Other User's Profile
 ![other-user-profile]
