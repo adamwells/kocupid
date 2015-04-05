@@ -9,16 +9,18 @@
 * SessionController (create, new, destroy)
 
 ### Views
+* static_pages/root.html.erb
 
 ## Backbone
 ### Models
+* User
 
 ### Collections
 
 ### Views
-* users/new.html.erb
-* users/show.html.erb
-* session/new.html.erb
-* profiles/show.html.erb
+* users/show.js
+* users/new.js
+* session/new.js
+* profiles/show.js
 
 ## Gems/Libraries
