@@ -43,12 +43,14 @@ Implement the 'Like' model in Rails.  Allow user to view the profiles of other u
 [Details][phase-four]
 
 ### Phase Five: Messages
-Implement the 'Message' model in Rails.  Add API routes to view an index of or create messages.  Create a basic message inbox view.  Using Backbone, allow users to switch between viewing sent and recieved messages.  Using Backbone, add a button on the user profile page of other users which pulls up a form in which to compose and send a message to that user.  By the end of this phase, users should be able to view messages sent to them in their inbox, and compose messages to other users via their profile pages.
+Implement the 'Message' model in Rails.  Add API messages controller and routes to view an index of or create messages.  Create a basic message inbox view.  Using Backbone, allow users to switch between viewing sent and recieved messages.  Using Backbone, add a button on the user profile page of other users which pulls up a form in which to compose and send a message to that user.  By the end of this phase, users should be able to view messages sent to them in their inbox, and compose messages to other users via their profile pages.
 
 [Details][phase-five]
 
 ### Phase Six: Search Matches
+Add a Backbone form at the top of the matches page to add search criteria.  Update the current index of users shown based on the given criteria (select from the Users Backbone collection only those that fit the criteria and remove the rest).  If a criteria is made less specific, fetch Users again and narrow it down to match the current criteria.  By the end of this phase, users should be able to search their matches page for only users that match a given set of criteria.
 
+[Details][phase-six]
 
 
 ## Bonus Features
@@ -67,3 +69,4 @@ Implement the 'Message' model in Rails.  Add API routes to view an index of or c
 [phase-three]: ./docs/phases/phase3.md
 [phase-four]: ./docs/phases/phase4.md
 [phase-five]: ./docs/phases/phase5.md
+[phase-six]: ./docs/phases/phase6.md
