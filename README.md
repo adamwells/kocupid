@@ -3,14 +3,15 @@
 ## Minimum Viable Product
 - [ ] Create an account
 - [ ] Create a session
-- [ ] View profile
+- [ ] View own profile
 - [ ] Edit profile
-- [ ] Find matches
-- [ ] View other users' pages
+- [ ] View matches
+- [ ] View other users' profiles
 - [ ] 'Like' other users
-- [ ] Read messages in inbox
+- [ ] View messages inbox
+- [ ] View an individual message in inbox
 - [ ] Compose/Send messages to other users
-- [ ] Search for users by attributes (age, gender, weight class, etc)
+- [ ] Search for users on match page by attributes (age, gender, weight class, etc)
 
 ## Design Documents
 * [View wireframes][views]
@@ -28,4 +29,11 @@ Implement basic user authentication features in Rails.  Create a simple form for
 Create an API controller to send JSON of users.  Add a basic index of other users (to become the 'matches' page later).  Add a basic profile page that the items in the user index link to.
 
 ## Bonus Features
-
+- [ ] Have demo login button
+- [ ] Forgot password functionality
+- [ ] Sign in with facebook
+- [ ] View visitors
+- [ ] Sidebar - You might like (links to profiles)
+- [ ] Questions for better matches
+- [ ] Colored line at bottom of user index items (based on responsiveness)
+- [ ] Interactive introduction to the site
