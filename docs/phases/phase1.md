@@ -19,8 +19,8 @@
 
 ### Views
 * users/show.js
-* users/new.js
-* session/new.js
+* users/form.js
+* session/form.js
 * profiles/show.js
 
 ## Gems/Libraries
