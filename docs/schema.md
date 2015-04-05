@@ -9,28 +9,6 @@ username        | string    | not null, unique
 password_digest | string    | not null
 session_token   | string    | not null, unique
 
-## profiles
-column_name                  | data_type | details
------------------------------|-----------|------------------
-id                           | integer   | not null, primary key
-user_id                      | integer   | not null, foreign key
-self_summary                 | text      |
-message_if                   | text      |
-height                       | integer   |
-weight                       | integer   |
-body_type                    | string    |
-weight_class                 | string    |
-style                        | string    |
-looking_for_wrestler         | boolean   |
-looking_for_boxer            | boolean   |
-looking_for_mma_fighter      | boolean   |
-looking_for_other_styles     | boolean   |
-looking_for_women            | boolean   |
-looking_for_men              | boolean   |
-looking_for_opponent         | boolean   |
-looking_for_sparring_partner | boolean   |
-
-
 ## likes
 column_name     | data_type | details
 ----------------|-----------|------------------
@@ -45,3 +23,25 @@ id              | integer   | not null, primary key
 sender_id       | integer   | not null, foreign key
 recipient_id    | integer   | not null, foreign key
 body            | text      | not null
+
+## profiles
+column_name                  | data_type | details
+-----------------------------|-----------|------------------
+id                           | integer   | not null, primary key
+user_id                      | integer   | not null, foreign key
+self_summary                 | text      |
+good_at                      | text      |
+message_if                   | text      |
+height                       | integer   |
+weight                       | integer   |
+body_type                    | string    |
+weight_class                 | string    |
+style                        | string    |
+looking_for_wrestler         | boolean   |
+looking_for_boxer            | boolean   |
+looking_for_mma_fighter      | boolean   |
+looking_for_other_styles     | boolean   |
+looking_for_women            | boolean   |
+looking_for_men              | boolean   |
+looking_for_opponent         | boolean   |
+looking_for_sparring_partner | boolean   |
