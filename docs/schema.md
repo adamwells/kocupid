@@ -21,6 +21,13 @@ weight          | integer   |
 weight_class    | string    |
 style           | string    |
 
+## likes
+column_name     | data_type | details
+----------------|-----------|------------------
+id              | integer   | not null, primary key
+liker_id        | integer   | not null, foreign key
+likee_id        | integer   | not null, foreign key
+
 ## messages
 column_name     | data_type | details
 ----------------|-----------|------------------
