@@ -15,6 +15,11 @@ column_name     | data_type | details
 id              | integer   | not null, primary key
 user_id         | integer   | not null, foreign key
 self_summary    | text      |
+message_if      | text      |
+height          | integer   |
+weight          | integer   |
+weight_class    | string    |
+style           | string    |
 
 ## messages
 column_name     | data_type | details
