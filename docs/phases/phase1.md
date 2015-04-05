@@ -2,7 +2,7 @@
 
 ## Rails
 ### Models
-* user
+* User
 
 ### Controllers
 * UsersController (create, new, show)
