@@ -1,19 +1,21 @@
-# Phase Two: Viewing Matches, Viewing Profiles
+# Phase Two: View Profile, Edit Profile
 
 ## Rails
 ### Models
+* Profile
 
 ### Controllers
-* UsersController (index, show)
+* API::ProfilesController (create, new, update)
 
 ### Views
-* some kind of matches page
 
 ## Backbone
 ### Models
+* Profile
 
 ### Collections
 
 ### Views
+* profiles/show.js
 
 ## Gems/Libraries
