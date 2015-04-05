@@ -13,4 +13,4 @@ session_token   | string    | not null, unique
 column_name     | data_type | details
 ----------------|-----------|------------------
 user_id         | integer   | not null, foreign key
-summary         | text      |
+self_summary         | text      |
