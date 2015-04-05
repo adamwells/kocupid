@@ -19,4 +19,4 @@
 [matches]: ./wireframes/matches.png
 [other-user-profile]: ./wireframes/other_user_profile.png
 [sign-in]: ./wireframes/sign_in.png
-[users-index-item]: ./wireframes/uesrs_index_item.png
+[users-index-item]: ./wireframes/users_index_item.png
