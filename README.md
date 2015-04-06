@@ -1,17 +1,18 @@
 # KOCupid
 
 ## Minimum Viable Product
+KOCupid is a site dedicated to finding fighters matchups - inspired by OKCupid
+
 - [ ] Create an account
 - [ ] Create a session
-- [ ] View own profile
-- [ ] Edit profile
-- [ ] View matches
-- [ ] View other users' profiles
+- [ ] View own profile/ other users' profiles
+- [ ] View matches (basic index of users at this point)
+- [ ] Search for users on match page by attributes (age, gender, weight class, etc)
 - [ ] 'Like' other users
 - [ ] View messages inbox
 - [ ] View an individual message in inbox
 - [ ] Compose/Send messages to other users
-- [ ] Search for users on match page by attributes (age, gender, weight class, etc)
+- [ ] Demo login button
 
 ## Design Documents
 * [View wireframes][views]
@@ -54,15 +55,14 @@ Add a Backbone form at the top of the matches page to add search criteria.  Upda
 
 
 ## Bonus Features
-- [ ] Have demo login button
-- [ ] Forgot password functionality
-- [ ] Sign in with facebook
-- [ ] Bookmark other users
-- [ ] View visitors
-- [ ] Sidebar - You might like (links to profiles)
-- [ ] Questions for better matches
-- [ ] Colored line at bottom of user index items (based on responsiveness)
 - [ ] Interactive introduction to the site
+- [ ] Bookmark other users
+- [ ] Profile formatting using markdown
+- [ ] Colored line at bottom of user index items (based on responsiveness)
+- [ ] View visitors
+- [ ] Photo uploading
+- [ ] Infinite scroll on matches page
+- [ ] Questions for better matches
 
 [phase-one]: ./docs/phases/phase1.md
 [phase-two]: ./docs/phases/phase2.md
