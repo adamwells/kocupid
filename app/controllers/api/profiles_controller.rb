@@ -2,12 +2,12 @@ module Api
 	class ProfilesController < ApiController
 		def index
 			@profiles = Profile.all
-			render json: @profiles
+			render :index
 		end
 
 		def show
 			@profile = Profile.find(params[:id])
-			render :show
+			render json: @profile
 		end
 	end
 end
