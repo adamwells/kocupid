@@ -8,7 +8,7 @@ class SessionController < ApplicationController
 
 		if @user
 			log_in!(@user)
-			render json: @user
+			render json: current_user
 		else
 			render text: "That login info couldn't be found!"
 		end
