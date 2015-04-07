@@ -7,7 +7,7 @@ Kocupid.Views.ProfilesIndex = Backbone.CompositeView.extend({
 
 	addProfile: function (profile) {
 		var indexItem = new Kocupid.Views.ProfilesIndexItem({ model: profile });
-		this.addSubview('.profiles-index', indexItem);
+		this.addSubview('.profiles-list', indexItem);
 	},
 
 	addProfiles: function () {
@@ -19,7 +19,7 @@ Kocupid.Views.ProfilesIndex = Backbone.CompositeView.extend({
 	render: function () {
 		var content = this.template({ profiles: this.collection });
 		this.$el.html(content);
-		this.addProfiles();
+		this.attachSubviews();
 		return this;
 	}
 });

@@ -5,6 +5,8 @@ Kocupid.Routers.Router = Backbone.Router.extend({
 
 	initialize: function (options) {
 		this.$rootEl = options.$rootEl;
+		this.profiles = new Kocupid.Collections.Profiles();
+		this.profiles.fetch();
 	},
 
 	index: function () {
