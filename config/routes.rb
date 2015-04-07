@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-	root to: 'static_pages#root'
+	root to: 'session#new'
   resources :users
+  resources :session
 end
