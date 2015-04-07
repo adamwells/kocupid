@@ -4,7 +4,8 @@ window.Kocupid = {
   Views: {},
   Routers: {},
   initialize: function() {
-
+  	window.router = new Kocupid.Routers.Router({ $rootEl: $('#content')});
+  	Backbone.history.start();
   }
 };
 

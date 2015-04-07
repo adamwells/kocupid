@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 	
   resources :users
   resources :session
+  get '/app', to: 'static_pages#root'
 
   namespace :api, defaults: { format: :json } do
   	resources :profiles

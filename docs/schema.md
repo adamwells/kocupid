@@ -29,6 +29,7 @@ column_name                  | data_type | details
 -----------------------------|-----------|------------------
 id                           | integer   | not null, primary key
 user_id                      | integer   | not null, foreign key
+gender                       | string    |
 photo_url                    | string    |
 self_summary                 | text      |
 good_at                      | text      |
