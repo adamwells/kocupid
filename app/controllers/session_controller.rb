@@ -7,6 +7,7 @@ class SessionController < ApplicationController
 		@user = User.find_by_credentials(user_credentials)
 
 		if @user
+			log_in!(@user)
 			render json: @user
 		else
 			render text: "That login info couldn't be found!"
