@@ -7,7 +7,7 @@ module Api
 
 		def show
 			@profile = Profile.find(params[:id])
-			render json: @profile
+			render :show
 		end
 	end
 end
