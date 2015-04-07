@@ -12,4 +12,8 @@
 #
 
 class User < ActiveRecord::Base
+	validates_presence_of :username, :email, :session_token, :password_digest
+	validates_uniqueness_of :username, :email, :session_token
+
+	
 end
