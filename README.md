@@ -3,8 +3,8 @@
 ## Minimum Viable Product
 KOCupid is a site dedicated to finding fighters matchups - inspired by OKCupid
 
-- [ ] Create an account
-- [ ] Create a session
+- [x] Create an account
+- [x] Create a session
 - [ ] View own profile/ other users' profiles
 - [ ] View basic index of users - late to become matches
 - [ ] 'Like' other users
