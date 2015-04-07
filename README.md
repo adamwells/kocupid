@@ -6,13 +6,14 @@ KOCupid is a site dedicated to finding fighters matchups - inspired by OKCupid
 - [ ] Create an account
 - [ ] Create a session
 - [ ] View own profile/ other users' profiles
-- [ ] View matches (basic index of users at this point)
-- [ ] Search for users on match page by attributes (age, gender, weight class, etc)
+- [ ] View basic index of users - late to become matches
 - [ ] 'Like' other users
 - [ ] View messages inbox
 - [ ] View an individual message in inbox
 - [ ] Compose/Send messages to other users
+- [ ] Search for users on match page by attributes (age, gender, weight class, etc)
 - [ ] Demo login button
+
 
 ## Design Documents
 * [View wireframes][views]
@@ -33,8 +34,8 @@ Add API routes to serve profile information in JSON.   Create a basic page for u
 
 [Details][phase-two]
 
-### Phase Three: View Matches (~1 day)
-Add API route to view a basic index of all other users (this will be switched to a search in the last phase).  By the end of this phase, users should be able to view their 'matches' and follow links to individual profile pages.
+### Phase Three: View Users Index (~1 day)
+Add API route to view a basic index of all other users (this will be switched to a search in the last phase).  By the end of this phase, users should be able to view an index of other users and follow links to individual profile pages.
 
 [Details][phase-three]
 
