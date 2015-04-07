@@ -29,6 +29,6 @@
 [other-user-profile]: ./wireframes/other_user_profile.png
 [sign-in]: ./wireframes/sign_in.png
 [users-index-item]: ./wireframes/users_index_item.png
-[messages-inbox]: ./wireframes/messages_index.png
-[messages-index-item]: ./wireframes/message-index-item.png
-[message-form]: ./wireframes/message-form.png
+[messages-inbox]: ./wireframes/messages_inbox.png
+[messages-index-item]: ./wireframes/message_index_item.png
+[message-form]: ./wireframes/message_form.png
