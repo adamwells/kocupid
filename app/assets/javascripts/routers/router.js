@@ -1,6 +1,7 @@
 Kocupid.Routers.Router = Backbone.Router.extend({
 	routes: {
-		'' : 'index'
+		'' : 'index',
+		'profiles/:id' : 'show'
 	},
 
 	initialize: function (options) {
@@ -13,6 +14,12 @@ Kocupid.Routers.Router = Backbone.Router.extend({
 		this.profiles.fetch();
 		var profilesIndex = new Kocupid.Views.ProfilesIndex({ collection: this.profiles });
 		this._swapView(profilesIndex);
+	},
+
+	show: function (id) {
+		var profile = this.profiles.getOrFetch(id);
+		var profileShow = new Kocupid.Views.ProfileShow({ model: profile });
+		this._swapView(profileShow);
 	},
 
 	_swapView: function (view) {
