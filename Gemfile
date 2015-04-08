@@ -4,6 +4,7 @@ gem 'autoprefixer-rails'
 gem 'faker'
 gem 'backbone-on-rails'
 gem 'ejs'
+gem 'newrelic_rpm'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
