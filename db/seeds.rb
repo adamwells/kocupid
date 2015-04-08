@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 User.destroy_all()
 Profile.destroy_all()
+Like.destroy_all()
 
 PHOTOS = ['http://i.imgur.com/sciSQG3.jpg', 'http://i.imgur.com/BhqqCZG.jpg', 'http://i.imgur.com/FL1hyX8.jpg',
 'http://i.imgur.com/OcrRV00.jpg', 'http://i.imgur.com/Fed3Qmu.jpg', 'http://i.imgur.com/BUPVDoX.jpg',
@@ -27,4 +28,12 @@ end
 									good_at: Faker::Lorem.paragraph,
 									message_if: Faker::Lorem.paragraph,
 									photo_url: PHOTOS.sample)
+end
+
+50.times do
+	liker_id = User.all[rand(21)].id
+	likee_id = User.all[rand(21)].id
+	if !Like.find_by(liker_id: liker_id, likee_id: likee_id)
+		Like.create!(liker_id: liker_id, likee_id: likee_id)
+	end
 end
