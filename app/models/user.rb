@@ -17,6 +17,12 @@ class User < ActiveRecord::Base
 
 	after_initialize :ensure_session_token
 
+	has_many :received_likes, class_name: 'Like', foreign_key: :likee_id
+	has_many :given_likes, class_name: 'Like', foreign_key: :liker_id
+
+	has_many :likees, through: :given_likes
+	has_many :likers, through: :received_likes
+
 	has_one :profile, dependent: :destroy
 
 	def self.generate_session_token
