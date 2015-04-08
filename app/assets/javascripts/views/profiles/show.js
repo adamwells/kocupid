@@ -6,15 +6,10 @@ Kocupid.Views.ProfileShow = Backbone.CompositeView.extend({
 
 	initialize: function () {
 		this.listenTo(this.model, 'sync', this.render);
-		this.listenTo(this.model, 'sync', this.print);
-	},
-
-	print: function () {
-		console.log(this.model.attributes);
 	},
 
 	likeProfile: function (arguments) {
-		var like = new Kocupid.Models.Like({ likee_id: this.model.id });
+		var like = new Kocupid.Models.Like({ likee_id: this.model.get('user_id') });
 		like.save({
 			success: function () {
 				console.log('Toggle button to unlike');
