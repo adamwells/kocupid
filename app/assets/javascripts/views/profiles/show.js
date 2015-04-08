@@ -1,11 +1,8 @@
 Kocupid.Views.ProfileShow = Backbone.CompositeView.extend({
 	template: JST['profiles/show'],
-	events: {
-		'click .like' : 'likeProfile'
-	},
 
 	initialize: function () {
-		this.listenTo(this.model, 'sync', this.render);
+		this.listenTo(this.model, 'sync change', this.render);
 	},
 
 	likeProfile: function (arguments) {
@@ -17,9 +14,15 @@ Kocupid.Views.ProfileShow = Backbone.CompositeView.extend({
 		});
 	},
 
+	addLikeButton: function () {
+		var likeButton = new Kocupid.Views.LikeButton({ model: this.model });
+		this.addSubview('.like-toggle-button', likeButton);
+	},
+
 	render: function () {
 		var content = this.template({ profile: this.model });
 		this.$el.html(content);
+		this.addLikeButton();
 		return this;
 	}
 });

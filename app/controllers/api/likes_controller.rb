@@ -14,7 +14,15 @@ module Api
 			else
 				render json: @like.errors.full_messages
 			end
+		end
 
+		def destroy
+			@like = Like.find(params[:id])
+			if @like.destroy()
+				render json: @like
+			else
+				render json: "whoops"
+			end
 		end
 
 		private

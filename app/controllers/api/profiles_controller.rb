@@ -8,7 +8,8 @@ module Api
 		def show
 			@profile = Profile.find(params[:id])
 			@user = @profile.user
-			@liked = current_user.likees.include?(@user)
+			@like = Like.find_by({ likee_id: @user.id, liker_id: current_user.id })
+			@like_id = @like ? @like.id : nil
 			render :show
 		end
 	end
