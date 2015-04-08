@@ -10,14 +10,20 @@
 	display: block;
 	float: left;
 	background-color: cornflowerblue;
-	border-radius: 10px;
+	border-radius: 5px;
 	width: 30%;
 	height: 300px;
-	margin: 10px;
+	margin: 6px;
 	text-align: center;
+	transition: background-color 200ms;
+}
+
+.profiles-index-item:hover {
+	background-color: darkred;
 }
 
 .index-item-photo {
 	width: 75%;
 	height: 75%;
+	border-radius: 4px
 }
