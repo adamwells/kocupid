@@ -11,7 +11,6 @@ Kocupid.Routers.Router = Backbone.Router.extend({
 	},
 
 	index: function () {
-		this.profiles.fetch();
 		var profilesIndex = new Kocupid.Views.ProfilesIndex({ collection: this.profiles });
 		this._swapView(profilesIndex);
 	},

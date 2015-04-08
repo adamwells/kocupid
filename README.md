@@ -6,7 +6,7 @@ KOCupid is a site dedicated to finding fighters matchups - inspired by OKCupid
 - [x] Create an account
 - [x] Create a session
 - [ ] View own profile/ other users' profiles
-- [ ] View basic index of users - late to become matches
+- [x] View basic index of users - late to become matches
 - [ ] 'Like' other users
 - [ ] View messages inbox
 - [ ] View an individual message in inbox

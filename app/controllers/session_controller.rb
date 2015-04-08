@@ -1,5 +1,6 @@
 class SessionController < ApplicationController
 	def new
+		redirect_to '/app' if logged_in?
 		@user = User.new
 	end
 
