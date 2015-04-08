@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 20150408183817) do
     t.datetime "updated_at", null: false
   end
 
+  add_index "likes", ["liker_id", "likee_id"], name: "index_likes_on_liker_id_and_likee_id", using: :btree
+
   create_table "profiles", force: :cascade do |t|
     t.integer  "user_id",                                     null: false
     t.string   "photo_url"
