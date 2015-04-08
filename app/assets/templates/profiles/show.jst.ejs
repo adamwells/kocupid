@@ -1,11 +1,16 @@
 <h1 class="profile-username"><%= profile.escape('username') %></h1>
-<ul class="profile-text-fields">
+
+<img class="profile-photo" src="<%= profile.escape('photo_url') %>">
+
+<h5 class="looking-for-header">About me</h5>
+<ul class="profile-text-fields profile-list">
 	<li><p class='self-summary'>Self summary: <%= profile.escape('self_summary') %></p></li>
 	<li><p class='good_at'>Good at: <%= profile.escape('good_at') %></p></li>
 	<li><p class='message_if'>Message if: <%= profile.escape('message_if') %></p></li>
 </ul>
 
-<ul class="profile-features">
+<h5 class="looking-for-header">Features</h5>
+<ul class="profile-features profile-list">
 	<li class="height"><%= profile.escape('height') %></li>
 	<li class="weight"><%= profile.escape('weight') %></li>
 	<li class="body_type"><%= profile.escape('body_type') %></li>
@@ -13,6 +18,4 @@
 	<li class="style"><%= profile.escape('style') %></li>
 </ul>
 
-<ul class="profile-looking-for">
-	<%= JST['profiles/_looking_for']({ profile: profile }) %>
-</ul>
+<%= JST['profiles/_looking_for']({ profile: profile }) %>
