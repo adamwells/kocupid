@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150407222031) do
+ActiveRecord::Schema.define(version: 20150408180934) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20150407222031) do
     t.string   "style"
     t.boolean  "looking_for_wrestler",         default: true
     t.boolean  "looking_for_boxer",            default: true
-    t.boolean  "looking_for_mma_figher",       default: true
+    t.boolean  "looking_for_mma_fighter",      default: true
     t.boolean  "looking_for_other_styles",     default: true
     t.boolean  "looking_for_women",            default: true
     t.boolean  "looking_for_men",              default: true

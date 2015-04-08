@@ -3,6 +3,11 @@ Kocupid.Views.ProfileShow = Backbone.CompositeView.extend({
 
 	initialize: function () {
 		this.listenTo(this.model, 'sync', this.render);
+		this.listenTo(this.model, 'sync', this.print);
+	},
+
+	print: function () {
+		console.log(this.model.attributes);
 	},
 
 	render: function () {

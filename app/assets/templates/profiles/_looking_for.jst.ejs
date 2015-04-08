@@ -1,0 +1,22 @@
+<h5>Looking For:</h5>
+<ul class='profile-looking-for'>
+	<% if (profile.escape('looking_for_wrestler')) { %>
+		<li>Wrestlers</li>
+	<% } %>
+
+	<% if (profile.escape('looking_for_boxer')) { %>
+		<li>Boxers</li>
+	<% } %>
+
+	<% if (profile.escape('looking_for_mma_fighter')) { %>
+		<li>MMA Fighters</li>
+	<% } %>
+
+	<% if (profile.escape('looking_for_other_styles')) { %>
+		<li>Other Styles</li>
+	<% } %>
+
+
+</ul>
+
+

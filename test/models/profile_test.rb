@@ -15,7 +15,7 @@
 #  style                        :string
 #  looking_for_wrestler         :boolean          default(TRUE)
 #  looking_for_boxer            :boolean          default(TRUE)
-#  looking_for_mma_figher       :boolean          default(TRUE)
+#  looking_for_mma_fighter      :boolean          default(TRUE)
 #  looking_for_other_styles     :boolean          default(TRUE)
 #  looking_for_women            :boolean          default(TRUE)
 #  looking_for_men              :boolean          default(TRUE)
@@ -23,6 +23,7 @@
 #  looking_for_sparring_partner :boolean          default(TRUE)
 #  created_at                   :datetime         not null
 #  updated_at                   :datetime         not null
+#  gender                       :string
 #
 
 require 'test_helper'

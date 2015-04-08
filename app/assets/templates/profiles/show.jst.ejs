@@ -1,1 +1,18 @@
-<h1><%= profile.escape('self_summary') %></h1>
+<h1 class="profile-username"><%= profile.escape('username') %></h1>
+<ul class="profile-text-fields">
+	<li><p class='self-summary'>Self summary: <%= profile.escape('self_summary') %></p></li>
+	<li><p class='good_at'>Good at: <%= profile.escape('good_at') %></p></li>
+	<li><p class='message_if'>Message if: <%= profile.escape('message_if') %></p></li>
+</ul>
+
+<ul class="profile-features">
+	<li class="height"><%= profile.escape('height') %></li>
+	<li class="weight"><%= profile.escape('weight') %></li>
+	<li class="body_type"><%= profile.escape('body_type') %></li>
+	<li class="weight_class"><%= profile.escape('weight_class') %></li>
+	<li class="style"><%= profile.escape('style') %></li>
+</ul>
+
+<ul class="profile-looking-for">
+	<%= JST['profiles/_looking_for']({ profile: profile }) %>
+</ul>
