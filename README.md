@@ -8,7 +8,7 @@ KOCupid is a site dedicated to finding fighters matchups - inspired by OKCupid
 - [x] View own profile/ other users' profiles
 - [x] View basic index of users - late to become matches
 - [x] 'Like' other users
-- [ ] View messages inbox
+- [x] View messages inbox
 - [ ] View an individual message in inbox
 - [ ] Compose/Send messages to other users
 - [ ] Search for users on match page by attributes (age, gender, weight class, etc)
