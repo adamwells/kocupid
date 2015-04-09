@@ -1,16 +1,38 @@
+<style>
+	body {
+    background-image: url('http://i.imgur.com/WawafgZ.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+	}
+</style>
+
 
 <div class="login-page">
 	<div class="login-form input-group">
 		<h1>Log In</h1>
 		<form action="/session" method="POST">
-			<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
-			<input type="text" name="user[login]" placeholder="Email" class="form-control login-input"><br>
+			<input type="hidden" 
+						 name="authenticity_token" 
+						 value="<%= form_authenticity_token %>">
 
-			<input type="password" name="user[password]" placeholder="Password" class="form-control login-input"><br>
+			<input type="text" 
+						 name="user[login]" 
+						 placeholder="Email" 
+						 class="form-control login-input">
+			<br>
 
-			<input type="submit" value="Let's Go" class="btn btn-large btn-primary">
-			<%= link_to "Register", new_user_url, class: 'btn btn-large btn-primary' %>
+			<input type="password" 
+						 name="user[password]" 
+						 placeholder="Password" 
+						 class="form-control login-input">
+			<br>
+
+			<input type="submit" value="Let's Go" class="login btn btn-large btn-primary">
+			<%= link_to "Register", new_user_url, class: 'register btn btn-large btn-primary' %>
+
 		</form>
+
+	<%= button_to "Demo Login", 'javascript:default(void)', class: 'demo btn btn-large btn-primary' %>
 	</div>
 </div>
