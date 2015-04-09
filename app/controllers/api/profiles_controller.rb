@@ -1,7 +1,7 @@
 module Api
 	class ProfilesController < ApiController
 		def index
-			@profiles = Profile.all
+			@profiles = Profile.where.not(id: current_user.profile.id)
 			render :index
 		end
 

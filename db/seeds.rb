@@ -14,6 +14,14 @@ PHOTOS = ['http://i.imgur.com/sciSQG3.jpg', 'http://i.imgur.com/BhqqCZG.jpg', 'h
 'http://i.imgur.com/PPAArko.jpg', 'http://i.imgur.com/uU2oxH1.jpg', 'http://i.imgur.com/TkdCEZB.jpg',
 'http://i.imgur.com/SdCtKB8.jpg']
 
+STYLES = ['Boxer', 'Wrestler', 'MMA Fighter', 'Other']
+
+WEIGHT_CLASSES = ['Featherweight', 'Lightweight', 'Middleweight', 'Heavyweight']
+
+BODY_TYPES = ['Tank']
+
+GENDERS = ['Male', 'Female']
+
 User.create!(email: 'adam', username: 'adam', password: 'adam')
 
 20.times do
@@ -27,6 +35,12 @@ end
 									self_summary: Faker::Lorem.paragraph,
 									good_at: Faker::Lorem.paragraph,
 									message_if: Faker::Lorem.paragraph,
+									style: STYLES.sample,
+									body_type: BODY_TYPES.sample,
+									height: rand(200),
+									weight: rand(200),
+									weight_class: WEIGHT_CLASSES.sample,
+									gender: GENDERS.sample,
 									photo_url: PHOTOS.sample)
 end
 
