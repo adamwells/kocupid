@@ -1,5 +1,7 @@
 # KOCupid
 
+[Live Demo](http://www.kocupid.co/)
+
 ## Minimum Viable Product
 KOCupid is a site dedicated to finding fighters matchups - inspired by OKCupid
 
