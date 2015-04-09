@@ -3,15 +3,7 @@ Kocupid.Views.ProfileShow = Backbone.CompositeView.extend({
 
 	initialize: function () {
 		this.listenTo(this.model, 'sync change', this.render);
-	},
-
-	likeProfile: function (arguments) {
-		var like = new Kocupid.Models.Like({ likee_id: this.model.get('user_id') });
-		like.save({
-			success: function () {
-				console.log('Toggle button to unlike');
-			}
-		});
+		this.listenTo(this.model, 'sync', this.addLikeButton);
 	},
 
 	addLikeButton: function () {
@@ -22,7 +14,7 @@ Kocupid.Views.ProfileShow = Backbone.CompositeView.extend({
 	render: function () {
 		var content = this.template({ profile: this.model });
 		this.$el.html(content);
-		this.addLikeButton();
+		this.attachSubviews();
 		return this;
 	}
 });

@@ -1,5 +1,5 @@
-<% if (profile.get('like_id') === null) { %>
-	<button class="btn btn-default">'Like' Fighter</button>
-<% } else { %>
+<% if (profile.get('like_id')) { %>
 	<button class="btn btn-default">'Unlike' Fighter</button>
+<% } else { %>
+	<button class="btn btn-default">'Like' Fighter</button>
 <% } %>

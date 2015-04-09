@@ -45,7 +45,7 @@ Kocupid.Views.MessagesIndex = Backbone.CompositeView.extend({
 	},
 
 	clearMessages: function() {
-		this.removeSubviews('.message-box')
+		this.removeSubviews('.message-box');
 	},
 
 	render: function () {
