@@ -1,11 +1,16 @@
-<h1>Log In</h1>
 
-<form action="/session" method="POST">
-	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+<div class="login-page">
+	<div class="login-form input-group">
+		<h1>Log In</h1>
+		<form action="/session" method="POST">
+			<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
-	<input type="text" name="user[login]" placeholder="Email" class="form-control"><br>
+			<input type="text" name="user[login]" placeholder="Email" class="form-control login-input"><br>
 
-	<input type="password" name="user[password]" placeholder="password" class="form-control"><br>
+			<input type="password" name="user[password]" placeholder="Password" class="form-control login-input"><br>
 
-	<input type="submit" value="Log In" class="btn btn-large btn-primary">
-</form>
+			<input type="submit" value="Let's Go" class="btn btn-large btn-primary">
+			<%= button_to "Register", new_user_url, class: 'btn btn-large btn-primary' %>
+		</form>
+	</div>
+</div>
