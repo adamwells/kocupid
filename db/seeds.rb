@@ -51,3 +51,9 @@ end
 		Like.create!(liker_id: liker_id, likee_id: likee_id)
 	end
 end
+
+150.times do
+	Message.create!(sender_id: rand(21) + 1, 
+									recipient_id: rand(21) + 1, 
+									body: Faker::Lorem.paragraph)
+end

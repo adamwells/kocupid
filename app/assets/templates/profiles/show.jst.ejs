@@ -1,27 +1,38 @@
-<h1 class="profile-username"><%= profile.escape('username') %></h1>
-<h3 class="style"><%= profile.escape('style') %></h3>
-
-<img class="profile-photo" src="<%= profile.escape('photo_url') %>">
-
 <div class="actions">
-	<button class="message btn btn-default">Message Fighter</button>
-	<div class="like-toggle-button"></div>
+	<button class="action message btn btn-default">Message Fighter</button>
+	<div class="action like-toggle-button"></div>
 </div>
 
-<h5 class="looking-for-header">About me</h5>
-<ul class="profile-text-fields profile-list">
-	<li><p class='self-summary'>Self summary: <%= profile.escape('self_summary') %></p></li>
-	<li><p class='good_at'>Good at: <%= profile.escape('good_at') %></p></li>
-	<li><p class='message_if'>Message if: <%= profile.escape('message_if') %></p></li>
-</ul>
+<div class="header-info clearfix">
+	<img class="profile-photo" src="<%= profile.escape('photo_url') %>">
 
-<h5 class="looking-for-header">Features</h5>
-<ul class="profile-features profile-list">
-	<li class="height"><%= profile.escape('height') %></li>
-	<li class="weight"><%= profile.escape('weight') %></li>
-	<li class="body_type"><%= profile.escape('body_type') %></li>
-	<li class="weight_class"><%= profile.escape('weight_class') %></li>
-	
-</ul>
+	<div class="basic-info">
+		<h1 class="profile-username"><%= profile.escape('username') %></h1>
+		<h3 class="style"><%= profile.escape('style') %></h3>
+	</div>
+</div>
+
+<hr class="header-divider">
+
+<div class="about-me">
+<h4 class="profile-header">About me</h4>
+	<ul class="profile-text-fields profile-list">
+		<li><p class='self-summary'>Self summary: <%= profile.escape('self_summary') %></p></li>
+		<li><p class='good_at'>Good at: <%= profile.escape('good_at') %></p></li>
+		<li><p class='message_if'>Message if: <%= profile.escape('message_if') %></p></li>
+	</ul>
+</div>
+
+<hr>
+
+<div class="features">
+<h4 class="profile-header">Features</h4>
+	<ul class="profile-features profile-list list-group">
+		<li class="height list-group-item">Height: <%= profile.escape('height') %></li>
+		<li class="weight list-group-item">Weight: <%= profile.escape('weight') %></li>
+		<li class="body_type list-group-item">Body Type: <%= profile.escape('body_type') %></li>
+		<li class="weight_class list-group-item">Weight Class: <%= profile.escape('weight_class') %></li>
+	</ul>
+</div>
 
 <%= JST['profiles/_looking_for']({ profile: profile }) %>

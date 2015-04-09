@@ -1,42 +1,44 @@
-<h5 class="looking-for-header">Interested in:</h5>
-<div class="profile-looking-for">
-	<ul class="profile-looking-for-fighter-types profile-list">
-		<% if (profile.escape('looking_for_wrestler')) { %>
-			<li>Wrestlers</li>
-		<% } %>
+<div class="looking-for">
+	<h4 class="profile-header">Interested in:</h4>
+	<div class="profile-looking-for">
+		<ul class="profile-looking-for-fighter-types profile-list">
+			<% if (profile.escape('looking_for_wrestler')) { %>
+				<li>Wrestlers</li>
+			<% } %>
 
-		<% if (profile.escape('looking_for_boxer')) { %>
-			<li>Boxers</li>
-		<% } %>
+			<% if (profile.escape('looking_for_boxer')) { %>
+				<li>Boxers</li>
+			<% } %>
 
-		<% if (profile.escape('looking_for_mma_fighter')) { %>
-			<li>MMA Fighters</li>
-		<% } %>
+			<% if (profile.escape('looking_for_mma_fighter')) { %>
+				<li>MMA Fighters</li>
+			<% } %>
 
-		<% if (profile.escape('looking_for_other_styles')) { %>
-			<li>Other Styles</li>
-		<% } %>
-	</ul>
+			<% if (profile.escape('looking_for_other_styles')) { %>
+				<li>Other Styles</li>
+			<% } %>
+		</ul>
 
-	<h5 class="looking-for-header">Prefers:</h5>
-	<ul class="profile-looking-for-gender profile-list">
-		<% if (profile.escape('looking_for_men')) { %>
-			<li>Men</li>
-		<% } %>
+		<h5 class="looking-for-header">Prefers:</h5>
+		<ul class="profile-looking-for-gender profile-list">
+			<% if (profile.escape('looking_for_men')) { %>
+				<li>Men</li>
+			<% } %>
 
-		<% if (profile.escape('looking_for_women')) { %>
-			<li>Women</li>
-		<% } %>
-	</ul>
+			<% if (profile.escape('looking_for_women')) { %>
+				<li>Women</li>
+			<% } %>
+		</ul>
 
-	<h5 class="looking-for-header">Looking For:</h5>
-	<ul class="profile-looking-for-partner-type profile-list">
-		<% if (profile.escape('looking_for_sparring_partner')) { %>
-			<li>Sparring partners</li>
-		<% } %>
+		<h5 class="looking-for-header">Looking For:</h5>
+		<ul class="profile-looking-for-partner-type profile-list">
+			<% if (profile.escape('looking_for_sparring_partner')) { %>
+				<li>Sparring partners</li>
+			<% } %>
 
-		<% if (profile.escape('looking_for_opponent')) { %>
-			<li>Opponents</li>
-		<% } %>
-	</ul>
+			<% if (profile.escape('looking_for_opponent')) { %>
+				<li>Opponents</li>
+			<% } %>
+		</ul>
+	</div>
 </div>

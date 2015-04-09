@@ -37,3 +37,21 @@
 	height: 130px;
 }
 
+.header-info > * {
+	float: left;
+}
+
+.actions {
+	float: right;
+	padding: 20px;
+}
+
+.features {
+	float: right;
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
