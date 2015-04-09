@@ -1,13 +1,28 @@
 Kocupid.Views.MessagesIndex = Backbone.CompositeView.extend({
 	template: JST['messages/index'],
+	events: {
+		'click .sent' : 'sent',
+		'click .received' : 'received'
+	},
 
 	initialize: function () {
 		this.listenTo(this.collection, 'sync', this.render);
+		this.sent();
 	},
 
-	addMessage: function (selector, message) {
+	sent: function () {
+		this.addMessages(this.sentMessages());
+		this.render();
+	},
+
+	received: function () {
+		this.addMessages(this.receivedMessages());
+		this.render();
+	},
+
+	addMessage: function (message) {
 		var indexItem = new Kocupid.Views.MessagesIndexItem({ model: message });
-		this.addSubview(selector, indexItem);
+		this.addSubview('.message-box', indexItem);
 	},
 
 	sentMessages: function () {
@@ -20,16 +35,22 @@ Kocupid.Views.MessagesIndex = Backbone.CompositeView.extend({
 		return new Kocupid.Collections.Messages(received);
 	},
 
-	addMessages: function (selector, collection) {
+	addMessages: function (collection) {
 		collection.each(function (message) {
-			this.addMessage(selector, message);
+			this.addMessage(message);
 		}.bind(this));
+	},
+
+	clearMessages: function() {
+		this.subviews('.message-box').forEach(function (subview) {
+			this.removeSubview('.message-box', subview)
+		}.bind(this))
 	},
 
 	render: function () {
 		var content = this.template();
 		this.$el.html(content);
-		this.addMessages('.sent-messages-index', this.sentMessages());
+		this.attachSubviews();
 		return this;
 	}
 });
