@@ -5,9 +5,11 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
-  <script>
-  	Kocupid.currentUserId = <%= current_user.id %>
-  </script>
+  <% if logged_in? %>
+  	<script>
+	  		Kocupid.currentUserId = <%= current_user.id %>	
+	  </script>
+  <% end %>
 </head>
 <body>
 
