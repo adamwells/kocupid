@@ -11,11 +11,13 @@ Kocupid.Views.MessagesIndex = Backbone.CompositeView.extend({
 	},
 
 	sent: function () {
+		this.clearMessages();
 		this.addMessages(this.sentMessages());
 		this.render();
 	},
 
 	received: function () {
+		this.clearMessages();
 		this.addMessages(this.receivedMessages());
 		this.render();
 	},
@@ -42,9 +44,8 @@ Kocupid.Views.MessagesIndex = Backbone.CompositeView.extend({
 	},
 
 	clearMessages: function() {
-		this.subviews('.message-box').forEach(function (subview) {
-			this.removeSubview('.message-box', subview)
-		}.bind(this))
+		var subviews = this.subviews();
+		subviews['.message-box'] = [];
 	},
 
 	render: function () {
