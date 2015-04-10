@@ -3,7 +3,8 @@ Kocupid.Views.MessagesIndex = Backbone.CompositeView.extend({
 	template: JST['messages/index'],
 	events: {
 		'click .sent' : 'sent',
-		'click .received' : 'received'
+		'click .received' : 'received',
+		'click .compose' : 'form',
 	},
 
 	initialize: function () {
@@ -22,6 +23,14 @@ Kocupid.Views.MessagesIndex = Backbone.CompositeView.extend({
 		this.currentView = 'received'
 		this.clearMessages();
 		this.addMessages(this.receivedMessages());
+		this.render();
+	},
+
+	form: function () {
+		this.currentView = 'compose';
+		this.clearMessages();
+		var messageForm = new Kocupid.Views.MessageForm({ collection: this.collection });
+		this.addSubview('.message-box', messageForm);
 		this.render();
 	},
 

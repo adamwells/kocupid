@@ -10,7 +10,7 @@ Kocupid.Views.ProfileShow = Backbone.CompositeView.extend({
 	},
 
 	messageUser: function () {
-
+		
 	},
 
 	addLikeButton: function () {

@@ -17,6 +17,7 @@
 //= require backbone
 //= require composite_view
 //= require kocupid
+//= require jquery.serializejson
 //= require_tree ../templates
 //= require_tree ./models
 //= require_tree ./collections
