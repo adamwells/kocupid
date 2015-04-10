@@ -19,3 +19,14 @@
 .view-option:hover {
 	cursor: pointer;
 }
+
+.messages-index-item {
+	padding: 20px 30px;
+	margin: 10px;
+	background-color: cornflowerblue;
+	border-radius: 5px;
+}
+
+.messages-index-item:hover {
+	background-color: rgba(130, 179, 267, 1);
+}
