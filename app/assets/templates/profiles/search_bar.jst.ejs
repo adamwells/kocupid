@@ -1,12 +1,32 @@
 <h3>Search</h3>
 
-<input name="username" type="text" class="form-control form-group" placeholder="Search by username"></input>
-<select name="style" class="form-control form-group">
-	<option value="">Style</option>
-	<option value="Boxer">Boxer</option>
-	<option value="Wrestler">Wrestler</option>
-	<option value="MMA Fighter">MMA Fighter</option>
-	<option value="Other">Other</option>
-</select>
+<form class="search-form">
+	<input name="username" type="text" class="form-control form-group" placeholder="Search by username"></input>
 
-<button class="search btn btn-large btn-primary">Search</button>
+	<select name="style" class="form-control form-group">
+		<option value="" disabled selected>Style</option>
+		<option value="Boxer">Boxer</option>
+		<option value="Wrestler">Wrestler</option>
+		<option value="MMA Fighter">MMA Fighter</option>
+		<option value="Other">Other</option>
+	</select>
+
+	<select name="gender" class="form-control form-group">
+		<option value="" disabled selected>Gender</option>
+		<option value="Male">Men</option>
+		<option value="Female">Women</option>
+		<option value="Other">Other</option>
+		<option value="">Any</option>
+	</select>
+
+	<select name="weight_class" class="form-control form-group">
+		<option value="" disabled selected>Weight Class</option>
+		<option value="Featherweight">Featherweight</option>
+		<option value="Lightweight">Lightweight</option>
+		<option value="Middleweight">Middleweight</option>
+		<option value="Heavyweight">Heavyweight</option>
+		<option value="">Any Weight Class</option>
+	</select>
+
+	<button class="search btn btn-large btn-primary">Search</button>
+</form>

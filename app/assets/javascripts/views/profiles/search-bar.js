@@ -1,6 +1,7 @@
 Kocupid.Views.SearchBar = Backbone.View.extend({
 	template: JST['profiles/search_bar'],
-	tagName: 'form',
+	tagName: 'div',
+	className: 'search-bar',
 	events: {
 		'submit' : 'search'
 	},
