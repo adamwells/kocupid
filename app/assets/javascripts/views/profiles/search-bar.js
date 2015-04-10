@@ -14,7 +14,7 @@ Kocupid.Views.SearchBar = Backbone.View.extend({
 		this.collection.set(this.fullCollection.models);
 
 		event.preventDefault();
-		var data = this.$el.serializeJSON();
+		var data = this.$('form').serializeJSON();
 		for (var k in data) {
 			if (!data[k]) {
 				delete data[k];
