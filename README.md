@@ -11,7 +11,7 @@ KOCupid is a site dedicated to finding fighters matchups - inspired by OKCupid
 - [x] View basic index of users - late to become matches
 - [x] 'Like' other users
 - [x] View messages inbox
-- [ ] View an individual message in inbox
+- [x] View an individual message in inbox
 - [ ] Compose/Send messages to other users
 - [ ] Search for users on match page by attributes (age, gender, weight class, etc)
 - [ ] Demo login button

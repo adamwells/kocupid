@@ -1,9 +1,16 @@
 Kocupid.Views.ProfileShow = Backbone.CompositeView.extend({
 	template: JST['profiles/show'],
+	events: {
+		'click .message' : 'messageUser'
+	},
 
 	initialize: function () {
 		this.listenTo(this.model, 'sync change', this.render);
 		this.listenTo(this.model, 'sync', this.addLikeButton);
+	},
+
+	messageUser: function () {
+
 	},
 
 	addLikeButton: function () {

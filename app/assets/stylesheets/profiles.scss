@@ -19,17 +19,26 @@
 }
 
 .profiles-index-item:hover {
-	background-color: darkred;
+	background-color: darkblue;
 }
 
 .index-item-photo {
 	width: 75%;
-	height: 75%;
-	border-radius: 4px
+	height: 60%;
+	border-radius: 50%;
 }
 
 .profile-list {
 	list-style-type: none;	
+}
+
+.username {
+	margin: 20px;
+	padding: 0px;
+}
+
+.username:hover {
+	cursor: pointer;
 }
 
 .profile-photo {

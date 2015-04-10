@@ -11,8 +11,7 @@ Kocupid.Views.MessagesIndexItem = Backbone.View.extend({
 	},
 
 	showMessage: function () {
-		// console.log(this.model)
-		// window.router.navigate('/messages/' + this.model.get('id'), { trigger: true });
+		window.router.navigate('/messages/' + this.model.get('id'), { trigger: true });
 	},
 
 	render: function () {

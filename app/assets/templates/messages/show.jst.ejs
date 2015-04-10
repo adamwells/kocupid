@@ -1,3 +1,6 @@
 <h1>Message from <%= message.escape('sender_username') %> to <%= message.escape('recipient_username') %></h1>
 
 <p><%= message.escape('body') %></p>
+
+<textarea class="form-control" placeholder="Reply to this message"></textarea>
+<button class="btn btn-large btn-primary">Send Reply</button>
