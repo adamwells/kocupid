@@ -35,7 +35,7 @@ Kocupid.Views.MessagesIndex = Backbone.CompositeView.extend({
 	},
 
 	addMessage: function (message) {
-		var indexItem = new Kocupid.Views.MessagesIndexItem({ model: message });
+		var indexItem = new Kocupid.Views.MessagesIndexItem({ model: message, collection: this.collection });
 		this.addSubview('.message-box', indexItem);
 	},
 

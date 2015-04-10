@@ -3,7 +3,9 @@ Kocupid.Views.MessagesIndexItem = Backbone.View.extend({
 	tagName: 'li',
 	className: 'messages-index-item',
 	events: {
-		'click' : 'showMessage'
+		'click .view-message-button' : 'showMessage',
+		'click .close-message-button' : 'render',
+		'click .send' : 'sendReply'
 	},
 
 	initialize: function () {
@@ -14,6 +16,20 @@ Kocupid.Views.MessagesIndexItem = Backbone.View.extend({
 		var content = JST['messages/show']({ message: this.model });
 		this.$el.html(content);
 		return this;
+	},
+
+	sendReply: function (event) {
+		event.preventDefault();
+		var data = this.$('.reply-form').serializeJSON();
+		var message = new Kocupid.Models.Message(data);
+		var messages = this.collection;
+
+		message.save({ recipient_username: this.model.get('sender_username')}, {
+			success: function () {
+				messages.add(message);
+				console.log("Woot!  Made it here.");
+			}
+		})
 	},
 
 	render: function () {

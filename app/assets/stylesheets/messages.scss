@@ -30,3 +30,12 @@
 .messages-index-item:hover {
 	background-color: rgba(130, 179, 267, 1);
 }
+
+.close-message-button, .view-message-button {
+	float: right;
+	font-size: 25px;
+}
+
+.close-message-button:hover, .view-message-button {
+	cursor: pointer;
+}
