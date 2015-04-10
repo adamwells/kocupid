@@ -18,6 +18,7 @@
 //= require composite_view
 //= require kocupid
 //= require jquery.serializejson
+//= require typed
 //= require_tree ../templates
 //= require_tree ./models
 //= require_tree ./collections

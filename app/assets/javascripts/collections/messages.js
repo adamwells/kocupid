@@ -18,5 +18,13 @@ Kocupid.Collections.Messages = Backbone.Collection.extend({
 		}
 
 		return message;
+	},
+
+	comparator: function (message1, message2) {
+		if (message1.get('sent_at') < message2.get('sent_at')) {
+			return 1 
+		} else {
+			return -1
+		}
 	}
 });

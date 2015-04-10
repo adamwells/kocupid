@@ -6,7 +6,6 @@
 	}
 </style>
 
-
 <div class="login-page">
 	<div class="login-form input-group">
 		<h1>Log In</h1>
@@ -19,13 +18,13 @@
 			<input type="text" 
 						 name="user[login]" 
 						 placeholder="Email" 
-						 class="form-control login-input">
+						 class="email form-control login-input">
 			<br>
 
 			<input type="password" 
 						 name="user[password]" 
 						 placeholder="Password" 
-						 class="form-control login-input">
+						 class="password form-control login-input">
 			<br>
 
 			<input type="submit" value="Let's Go" class="login btn btn-large btn-primary">
@@ -33,6 +32,23 @@
 
 		</form>
 
-	<%= button_to "Demo Login", 'javascript:default(void)', class: 'demo btn btn-large btn-primary' %>
+	<button class="demo btn btn-large btn-primary" onclick="demo()">Demo Login</button>
 	</div>
 </div>
+
+<script>
+
+	var demo = function methodName () {
+		$(function(){
+      $(".email").typed({
+          strings: ["rhonda.rousey@fighter.net"],
+          typeSpeed: 1
+      });
+
+      $(".password").typed({
+          strings: ["^1500rhondapassword"],
+          typeSpeed: 1
+      });
+  });
+	}
+</script>
