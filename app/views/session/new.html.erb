@@ -42,13 +42,19 @@
 		$(function(){
       $(".email").typed({
           strings: ["rhonda.rousey@fighter.net"],
-          typeSpeed: 1
+          typeSpeed: 50,
+          callback: function () {
+          	$(".password").typed({
+		          strings: ["rhondapassword"],
+		          typeSpeed: 50,
+		          callback: function () {
+		          	$(".login").click()
+          		}
+      			});
+          }
       });
 
-      $(".password").typed({
-          strings: ["^1500rhondapassword"],
-          typeSpeed: 1
-      });
+      
   });
 	}
 </script>
