@@ -44,10 +44,12 @@
 .profile-photo {
 	width: 200px;
 	height: 130px;
+	border-radius: 4px;
 }
 
 .header-info > * {
 	float: left;
+	margin: 10px;
 }
 
 .actions {

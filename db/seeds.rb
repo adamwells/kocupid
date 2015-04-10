@@ -24,6 +24,7 @@ BODY_TYPES = ['Tank']
 GENDERS = ['Male', 'Female']
 
 User.create!(email: 'adam', username: 'adam', password: 'adam')
+User.create!(email: 'rhonda.rousey@strikeforce.net', username: 'rhonda.rousey', password: 'rhondapassword')
 
 20.times do
 	User.create!(email: Faker::Internet.email,
