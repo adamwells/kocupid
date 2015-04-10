@@ -4,4 +4,5 @@ json.array! @messages do |message|
 	json.sender_id message.sender.id
 	json.recipient_id message.recipient.id
 	json.body message.body
+	json.id message.id
 end

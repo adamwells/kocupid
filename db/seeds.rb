@@ -8,6 +8,7 @@
 User.destroy_all()
 Profile.destroy_all()
 Like.destroy_all()
+Message.destroy_all()
 
 PHOTOS = ['http://i.imgur.com/sciSQG3.jpg', 'http://i.imgur.com/BhqqCZG.jpg', 'http://i.imgur.com/FL1hyX8.jpg',
 'http://i.imgur.com/OcrRV00.jpg', 'http://i.imgur.com/Fed3Qmu.jpg', 'http://i.imgur.com/BUPVDoX.jpg',
@@ -53,7 +54,7 @@ end
 end
 
 150.times do
-	Message.create!(sender_id: rand(21) + 1, 
-									recipient_id: rand(21) + 1, 
+	Message.create!(sender_id: User.all[rand(21)].id, 
+									recipient_id: User.all[rand(21)].id,
 									body: Faker::Lorem.paragraph)
 end

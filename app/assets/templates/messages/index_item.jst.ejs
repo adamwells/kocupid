@@ -1,1 +1,1 @@
-<div class="well"><%= message.escape('body') %></div>
+<div class="well"><strong><%= message.escape('sender_username') %>:</strong> <%= message.escape('body').substr(0, 70) + "..." %></div>
