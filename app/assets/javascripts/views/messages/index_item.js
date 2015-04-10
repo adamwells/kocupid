@@ -20,16 +20,24 @@ Kocupid.Views.MessagesIndexItem = Backbone.View.extend({
 
 	sendReply: function (event) {
 		event.preventDefault();
+		var button = this.$('.send');
+		button.prop('disabled', true);
+		
 		var data = this.$('.reply-form').serializeJSON();
 		var message = new Kocupid.Models.Message(data);
-		var messages = this.collection;
 
-		message.save({ recipient_username: this.model.get('sender_username')}, {
+		message.save({ recipient_username: this.model.get('sender_username') }, {
 			success: function () {
-				messages.add(message);
-				console.log("Woot!  Made it here.");
-			}
-		})
+				this.collection.add(message);
+				button.prop('disabled', false);
+				this.swapFormOut(message);
+			}.bind(this)
+		});
+	},
+
+	swapFormOut: function (message) {
+		var messageReply = JST['messages/reply']({ message: message });
+		this.$('.reply-form').html(messageReply);
 	},
 
 	render: function () {
