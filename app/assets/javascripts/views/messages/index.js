@@ -49,8 +49,8 @@ Kocupid.Views.MessagesIndex = Backbone.CompositeView.extend({
 		return new Kocupid.Collections.Messages(received);
 	},
 
-	addMessages: function (collection) {
-		this.collection.each(function (message) {
+	addMessages: function (messages) {
+		messages.each(function (message) {
 			this.addMessage(message);
 		}.bind(this));
 	},

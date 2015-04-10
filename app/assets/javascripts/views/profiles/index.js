@@ -10,7 +10,8 @@ Kocupid.Views.ProfilesIndex = Backbone.CompositeView.extend({
 	},
 
 	removeProfile: function (profile) {
-		var profileView = $.grep(this.subviews()['.profiles-index'], function(view) {return view.model.id === profile.id })[0];
+		var profileView = $.grep(this.subviews()['.profiles-index'],
+														 function(view) {return view.model.id === profile.id })[0];
 		this.removeSubview('.profiles-index', profileView);
 	},
 
