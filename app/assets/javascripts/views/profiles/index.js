@@ -2,11 +2,13 @@ Kocupid.Views.ProfilesIndex = Backbone.CompositeView.extend({
 	template: JST['profiles/index'],
 
 	initialize: function () {
-		this.listenTo(this.collection, 'sync', this.render);
-		this.listenTo(this.collection, 'add', this.addProfile);
-		this.listenTo(this.collection, 'remove', this.removeProfile);
+		this.shownItems = new Kocupid.Collections.Profiles();
 		this.addSearchBar();
 		this.addProfiles();
+
+		this.listenTo(this.collection, 'sync', this.render);
+		this.listenTo(this.shownItems, 'add', this.addProfile);
+		this.listenTo(this.shownItems, 'remove', this.removeProfile);
 	},
 
 	removeProfile: function (profile) {
@@ -16,7 +18,7 @@ Kocupid.Views.ProfilesIndex = Backbone.CompositeView.extend({
 	},
 
 	addSearchBar: function () {
-		var searchBar = new Kocupid.Views.SearchBar({ parentView: this });
+		var searchBar = new Kocupid.Views.SearchBar({ collection: this.shownItems, fullCollection: this.collection });
 		this.addSubview('.search-bar', searchBar);
 	},
 
@@ -26,13 +28,14 @@ Kocupid.Views.ProfilesIndex = Backbone.CompositeView.extend({
 	},
 
 	addProfiles: function () {
-		this.collection.each(function (profile) {
+		this.shownItems.each(function (profile) {
 			this.addProfile(profile);
 		}.bind(this));
 	},
 
 	render: function () {
-		var content = this.template({ profiles: this.collection });
+		var content = this.template({ profiles: this.shownItems });
+		this.shownItems.set(this.collection.models)
 		this.$el.html(content);
 		this.attachSubviews();
 		return this;

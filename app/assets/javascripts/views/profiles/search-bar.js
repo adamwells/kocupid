@@ -6,13 +6,24 @@ Kocupid.Views.SearchBar = Backbone.View.extend({
 	},
 
 	initialize: function (options) {
-		this.parentView = options.parentView;
+		this.fullCollection = options.fullCollection;
 	},
 
 	search: function (event) {
+		this.collection.set(this.fullCollection.models);
+
 		event.preventDefault();
 		var data = this.$el.serializeJSON();
-		this.parentView.collection.set(this.parentView.collection.where(data));
+		for (var k in data) {
+			if (!data[k]) {
+				delete data[k];
+			}
+		}
+
+		console.log(data);
+		if (!$.isEmptyObject(data)) {
+			this.collection.set(this.collection.where(data));
+		}
 	},
 
 	render: function () {
