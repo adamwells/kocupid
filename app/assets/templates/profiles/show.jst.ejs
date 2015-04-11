@@ -4,20 +4,22 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Modal title</h4>
+        <h4 class="modal-title">New Message to <%= profile.escape('username') %></h4>
       </div>
       <div class="modal-body">
-        <p>One fine body&hellip;</p>
+      	<form>
+        	<textarea placeholder="Message..." name="body" class="form-control"></textarea>
+        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="send-message btn btn-primary">Send Message</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-<!-- the real page is below this line -->
+<!-- the visible page is below this line -->
 
 <div class="actions">
 	<button data-toggle="modal" href="#myModal" class="action message btn btn-default">Message Fighter</button>

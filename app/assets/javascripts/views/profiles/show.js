@@ -1,7 +1,7 @@
 Kocupid.Views.ProfileShow = Backbone.CompositeView.extend({
 	template: JST['profiles/show'],
 	events: {
-		'click .message' : 'messageUser'
+		'click .send-message' : 'messageUser'
 	},
 
 	initialize: function () {
@@ -10,7 +10,14 @@ Kocupid.Views.ProfileShow = Backbone.CompositeView.extend({
 	},
 
 	messageUser: function () {
-		
+		var data = this.$('form').serializeJSON();
+		data['recipient_username'] = this.model.get('username');
+		var message = new Kocupid.Models.Message(data);
+		message.save([], {
+			success: function () {
+				alert('message sent');
+			}
+		})
 	},
 
 	addLikeButton: function () {
