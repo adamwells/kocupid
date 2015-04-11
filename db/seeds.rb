@@ -43,7 +43,8 @@ end
 									weight: rand(200),
 									weight_class: WEIGHT_CLASSES.sample,
 									gender: GENDERS.sample,
-									photo_url: PHOTOS.sample)
+									photo_url: PHOTOS.sample,
+									birth_date: Faker::Time.between(60.years.ago, 20.years.ago).to_date)
 end
 
 50.times do
