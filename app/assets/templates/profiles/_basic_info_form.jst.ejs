@@ -1,0 +1,33 @@
+<div class="basic-info">
+	<input class="form-control" 
+				 name="username" 
+				 value="<%= profile.escape('username') %>">
+
+	<select name="style" class="form-control form-group">
+		<option value="" disabled selected>Style</option>
+
+		<option value="Boxer"
+						<% if (profile.escape('style') === "Boxer") { %> 
+							selected
+						<% } %>
+						>Boxer</option>
+
+		<option value="Wrestler"
+						<% if (profile.escape('style') === "Wrestler") { %> 
+							selected
+						<% } %>
+						>Wrestler</option>
+
+		<option value="MMA Fighter"
+						<% if (profile.escape('style') === "MMA Fighter") { %> 
+							selected
+						<% } %>
+						>MMA Fighter</option>
+
+		<option value="Other" 
+						<% if (profile.escape('style') === "Other") { %> 
+							selected
+						<% } %>
+						>Other</option>
+	</select>
+</div>

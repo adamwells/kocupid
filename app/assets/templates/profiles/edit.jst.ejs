@@ -10,21 +10,14 @@
 	<div class="header-info clearfix">
 		<img class="profile-photo" src="<%= profile.escape('photo_url') %>">
 
-		<div class="basic-info">
-			<h1 class="profile-username"><input class="form-control" name="username" value="<%= profile.escape('username') %>"</h1>
-			<h3 class="style"><%= profile.escape('style') %></h3>
-		</div>
+		<%= JST['profiles/_basic_info_form']({ profile: profile }) %>
 	</div>
 
 	<hr class="header-divider">
 
 	<div class="about-me">
 	<h4 class="profile-header">About me</h4>
-		<ul class="profile-text-fields profile-list">
-			<li><p class='self-summary'><h5>Self summary: </h5><%= profile.escape('self_summary') %></p></li>
-			<li><p class='good_at'><h5>Good at: </h5><%= profile.escape('good_at') %></p></li>
-			<li><p class='message_if'><h5>Message if: </h5><%= profile.escape('message_if') %></p></li>
-		</ul>
+		<%= JST['profiles/_about_me_form']({ profile: profile }) %>
 	</div>
 
 	<hr>

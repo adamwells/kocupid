@@ -15,12 +15,11 @@ module Api
 
 		def update
 			@profile = Profile.find(params[:id])
-
-			puts "THIS IS HERE"
-			puts params
-
 			@user = @profile.user
-			@user.save!(user_params)
+
+			@user.update(user_params)
+			@profile.update(profile_params)
+
 			render :show
 		end
 
@@ -31,7 +30,7 @@ module Api
 		end
 
 		def user_params
-			params.require(:profile).permit(:username)
+			params.permit(:username)
 		end
 	end
 end

@@ -12,10 +12,17 @@ Kocupid.Views.EditProfile = Backbone.CompositeView.extend ({
 	submitForm: function (event) {
 		event.preventDefault();
 		var data = this.$el.serializeJSON();
-		console.log(data);
-		this.model.save(data {
+
+		for (var k in data) {
+			if (!data[k]) {
+				delete data[k];
+			}
+		}
+
+		this.model.save(data, {
 			success: function () {
 				window.router.navigate('profiles/' + this.model.get('id'), { trigger: true })
+				console.log(this.model.attributes);
 			}.bind(this)
 		});
 	},
