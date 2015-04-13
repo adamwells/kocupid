@@ -22,7 +22,6 @@ Kocupid.Views.EditProfile = Backbone.CompositeView.extend ({
 		this.model.save(data, {
 			success: function () {
 				window.router.navigate('profiles/' + this.model.get('id'), { trigger: true })
-				console.log(this.model.attributes);
 			}.bind(this)
 		});
 	},

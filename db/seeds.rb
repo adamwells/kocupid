@@ -23,16 +23,15 @@ BODY_TYPES = ['Tank']
 
 GENDERS = ['Male', 'Female']
 
-User.create!(email: 'adam', username: 'adam', password: 'adam')
 User.create!(email: 'rhonda.rousey@strikeforce.net', username: 'rhonda.rousey', password: 'rhondapassword')
 
-20.times do
+21.times do
 	User.create!(email: Faker::Internet.email,
 							 username: Faker::Internet.user_name, 
 							 password: Faker::Internet.password)
 end
 
-21.times do |i|
+22.times do |i|
 	Profile.create!(user_id: User.all[i].id,
 									self_summary: Faker::Lorem.paragraph,
 									good_at: Faker::Lorem.paragraph,

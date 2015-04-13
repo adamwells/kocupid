@@ -37,24 +37,40 @@
 
 		<h5 class="looking-for-header">Prefers:</h5>
 		<ul class="profile-looking-for-gender profile-list">
-			<% if (profile.escape('looking_for_men')) { %>
-				<li>Men</li>
-			<% } %>
+			<label>
+				<input type="checkbox" name="looking_for_men"
+					<% if (profile.escape('looking_for_men')) { %>
+						checked="checked"
+					<% } %>
+				> Men
+			</label><br>
 
-			<% if (profile.escape('looking_for_women')) { %>
-				<li>Women</li>
-			<% } %>
+			<label>
+				<input type="checkbox" name="looking_for_women"
+					<% if (profile.escape('looking_for_women')) { %>
+						checked="checked"
+					<% } %>
+				> Women
+			</label><br>
 		</ul>
 
 		<h5 class="looking-for-header">Looking For:</h5>
 		<ul class="profile-looking-for-partner-type profile-list">
-			<% if (profile.escape('looking_for_sparring_partner')) { %>
-				<li>Sparring partners</li>
-			<% } %>
+			<label>
+				<input type="checkbox" name="looking_for_sparring_partner"
+					<% if (profile.escape('looking_for_sparring_partner')) { %>
+						checked="checked"
+					<% } %>
+				> Sparring Partners
+			</label><br>
 
-			<% if (profile.escape('looking_for_opponent')) { %>
-				<li>Opponents</li>
-			<% } %>
+			<label>
+				<input type="checkbox" name="looking_for_opponent"
+					<% if (profile.escape('looking_for_opponent')) { %>
+						checked="checked"
+					<% } %>
+				> Opponents
+			</label><br>
 		</ul>
 	</div>
 </div>
