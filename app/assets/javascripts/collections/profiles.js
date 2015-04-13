@@ -18,5 +18,13 @@ Kocupid.Collections.Profiles = Backbone.Collection.extend({
 		}
 
 		return profile;
+	},
+
+	usernames: function () {
+		var names = [];
+		this.models.forEach(function (profile) {
+			names.push(profile.escape('username'));
+		});
+		return names;
 	}
 });

@@ -36,14 +36,11 @@
 	<button class="search btn btn-large btn-primary">Search</button>
 </form>
 
+
 <script>
-
-
-  $(function() {
-    $( ".username-input" ).autocomplete({
-      source: ['this', 'that']
-    });
-  });
-
-  //$.getJSON(<%= usernames %>)
+	  $(function() {	
+	    $( ".username-input" ).autocomplete({
+	      source: <%= usernames %>
+	    });
+  	});
 </script>

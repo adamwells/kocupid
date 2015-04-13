@@ -20,22 +20,15 @@ Kocupid.Views.SearchBar = Backbone.View.extend({
 			}
 		}
 
-		console.log(data);
 		if (!$.isEmptyObject(data)) {
 			this.collection.set(this.collection.where(data));
 		}
 	},
 
-	usernameSuggestions: function () {
-		var usernames = [];
-		this.fullCollection.each(function (profile) {
-			usernames.push(profile.escape('username'));
-		});
-		return usernames;
-	},
-
 	render: function () {
-		var content = this.template({ usernames: JSON.stringify(this.usernameSuggestions()) });
+		var usernames = JSON.stringify(this.fullCollection.usernames());
+		console.log(usernames)
+		var content = this.template({ usernames: usernames });
 		this.$el.html(content);
 		return this;
 	}
