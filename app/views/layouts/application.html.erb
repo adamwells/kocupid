@@ -6,6 +6,8 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
   <%= favicon_link_tag 'favicon.ico' %>
+  <%= filepicker_js_include_tag %>
+
   <% if logged_in? %>
   	<script>
 	  		Kocupid.currentUserId = <%= current_user.id %>	
@@ -13,9 +15,14 @@
 	  </script>
   <% end %>
   
+  
   <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
+  <script>
+    filepicker.setKey("<%= ENV['FILEPICKER_API_KEY'] %>");
+  </script>
+  
   <style>
     .ui-autocomplete {
       max-height: 100px;

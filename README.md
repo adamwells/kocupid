@@ -63,7 +63,7 @@ Add a Backbone form at the top of the matches page to add search criteria.  Upda
 - [ ] Profile formatting using markdown
 - [ ] Colored line at bottom of user index items (based on responsiveness)
 - [ ] View visitors
-- [ ] Photo uploading
+- [x] Photo uploading
 - [ ] Infinite scroll on matches page
 - [ ] Questions for better matches
 - [ ] Message notifications

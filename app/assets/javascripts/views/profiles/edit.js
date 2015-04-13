@@ -2,7 +2,8 @@ Kocupid.Views.EditProfile = Backbone.CompositeView.extend ({
 	template: JST['profiles/edit'],
 	tagName: 'form',
 	events: {
-		'click .save' : 'submitForm'
+		'click .save' : 'submitForm',
+		'click .filepicker' : 'filepick'
 	},
 
 	initialize: function () {
@@ -27,13 +28,19 @@ Kocupid.Views.EditProfile = Backbone.CompositeView.extend ({
 			}			
 		}
 
-		console.log(data);
-
 		this.model.save(data, {
 			success: function () {
 				window.router.navigate('profiles/' + this.model.get('id'), { trigger: true })
 			}.bind(this)
 		});
+	},
+
+	filepick: function () {
+		filepicker.pick(
+		  function(Blob){
+		    this.model.set({ photo_url: Blob.url })
+		  }.bind(this)
+		);
 	},
 
 	render: function () {
