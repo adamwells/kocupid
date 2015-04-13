@@ -1,61 +1,64 @@
-<!-- message modal -->
-<div id="myModal" class="modal fade">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">New Message to <%= profile.escape('username') %></h4>
-      </div>
-      <div class="modal-body">
-      	<form>
-        	<textarea placeholder="Message..." name="body" class="form-control"></textarea>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="send-message btn btn-primary">Send Message</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+<div class="page-content"
 
-<!-- the visible page is below this line -->
+	<!-- message modal -->
+	<div id="myModal" class="modal fade">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title">New Message to <%= profile.escape('username') %></h4>
+	      </div>
+	      <div class="modal-body">
+	      	<form>
+	        	<textarea placeholder="Message..." name="body" class="form-control"></textarea>
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="send-message btn btn-primary">Send Message</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
 
-<div class="actions">
-	<button data-toggle="modal" href="#myModal" class="action message btn btn-default">Message Fighter</button>
-	<div class="action like-toggle-button"></div>
-</div>
+	<!-- the visible page is below this line -->
 
-<div class="header-info clearfix">
-	<img class="profile-photo" src="<%= profile.escape('photo_url') %>">
-
-	<div class="basic-info">
-		<h1 class="profile-username"><%= profile.escape('username') %></h1>
-		<h3 class="style"><%= profile.escape('style') %></h3>
+	<div class="actions">
+		<button data-toggle="modal" href="#myModal" class="action message btn btn-default">Message Fighter</button>
+		<div class="action like-toggle-button"></div>
 	</div>
+
+	<div class="header-info clearfix">
+		<img class="profile-photo" src="<%= profile.escape('photo_url') %>">
+
+		<div class="basic-info">
+			<h1 class="profile-username"><%= profile.escape('username') %></h1>
+			<h3 class="style"><%= profile.escape('style') %></h3>
+		</div>
+	</div>
+
+	<hr class="header-divider">
+
+	<div class="about-me">
+	<h4 class="profile-header">About me</h4>
+		<ul class="profile-text-fields profile-list">
+			<li><p class='self-summary'><h5>Self summary: </h5><%= profile.escape('self_summary') %></p></li>
+			<li><p class='good_at'><h5>Good at: </h5><%= profile.escape('good_at') %></p></li>
+			<li><p class='message_if'><h5>Message if: </h5><%= profile.escape('message_if') %></p></li>
+		</ul>
+	</div>
+
+	<hr>
+
+	<div class="features">
+	<h4 class="profile-header">Features</h4>
+		<ul class="profile-features profile-list list-group">
+			<li class="height list-group-item">Height: <%= profile.escape('height') %></li>
+			<li class="weight list-group-item">Weight: <%= profile.escape('weight') %></li>
+			<li class="body_type list-group-item">Body Type: <%= profile.escape('body_type') %></li>
+			<li class="weight_class list-group-item">Weight Class: <%= profile.escape('weight_class') %></li>
+		</ul>
+	</div>
+
+	<%= JST['profiles/_looking_for']({ profile: profile }) %>
 </div>
-
-<hr class="header-divider">
-
-<div class="about-me">
-<h4 class="profile-header">About me</h4>
-	<ul class="profile-text-fields profile-list">
-		<li><p class='self-summary'><h5>Self summary: </h5><%= profile.escape('self_summary') %></p></li>
-		<li><p class='good_at'><h5>Good at: </h5><%= profile.escape('good_at') %></p></li>
-		<li><p class='message_if'><h5>Message if: </h5><%= profile.escape('message_if') %></p></li>
-	</ul>
-</div>
-
-<hr>
-
-<div class="features">
-<h4 class="profile-header">Features</h4>
-	<ul class="profile-features profile-list list-group">
-		<li class="height list-group-item">Height: <%= profile.escape('height') %></li>
-		<li class="weight list-group-item">Weight: <%= profile.escape('weight') %></li>
-		<li class="body_type list-group-item">Body Type: <%= profile.escape('body_type') %></li>
-		<li class="weight_class list-group-item">Weight Class: <%= profile.escape('weight_class') %></li>
-	</ul>
-</div>
-
-<%= JST['profiles/_looking_for']({ profile: profile }) %>
