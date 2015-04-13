@@ -3,7 +3,7 @@
 		<ul class="navbar-items nav navbar-nav navbar-right">
 			<li><%= link_to "Browse Matches", '#' %></li>
 			<li><%= link_to "Messages", '#messages' %></li>
-			<li><%= link_to "Profile", "#profiles/#{current_user.profile.id}" %></li>
+			<li><%= (link_to "Profile", "#profiles/#{current_user.profile.id}") if current_user.profile %></li>
 			<li><%= link_to "Logout", session_url(current_user.id), method: :delete %></li>
 		</ul>
 	</div>
