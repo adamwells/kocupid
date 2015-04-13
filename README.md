@@ -67,7 +67,7 @@ Add a Backbone form at the top of the matches page to add search criteria.  Upda
 - [ ] Infinite scroll on matches page
 - [ ] Questions for better matches
 - [ ] Message notifications
-- [ ] Auto-fill when searching for/messaging users
+- [x] Auto-fill when searching for/messaging users
 - [ ] Show match percentage
 
 [phase-one]: ./docs/phases/phase1.md
