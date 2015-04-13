@@ -1,7 +1,55 @@
 	<h4 class="profile-header">Features</h4>
 		<ul class="profile-features profile-list list-group">
-			<li class="height list-group-item">Height: <%= profile.escape('height') %></li>
-			<li class="weight list-group-item">Weight: <%= profile.escape('weight') %></li>
-			<li class="body_type list-group-item">Body Type: <%= profile.escape('body_type') %></li>
-			<li class="weight_class list-group-item">Weight Class: <%= profile.escape('weight_class') %></li>
+			<li class="height list-group-item">
+				<label>Height:
+					<input type="number" name="weight" min="0" max="200" value="<%= profile.escape('height') %>"> units
+				</label>
+			</li>
+			
+			<li class="weight list-group-item">
+				<label>Weight:
+					<input type="number" name="weight" min="0" max="500" value="<%= profile.escape('weight') %>"> pounds
+				</label>
+			</li>
+		
+			<li class="body_type list-group-item">
+				<select name="body_type" class="form-control">
+					<option value="" disabled selected>Body Type</option>
+					<option value="Tank"
+						<% if (profile.escape('body_type') === "Tank") { %>
+							selected
+						<% } %>
+					>Tank</option>
+				</select>
+			</li>
+
+			<li class="weight_class list-group-item">
+				<select name="body_type" class="form-control">
+					<option value="" disabled selected>Weight Class</option>
+
+					<option value="Featherweight"
+						<% if (profile.escape('weight_class') === "Featherweight") { %>
+							selected
+						<% } %>
+					>Featherweight</option>
+
+					<option value="Lightweight"
+						<% if (profile.escape('weight_class') === "Lightweight") { %>
+							selected
+						<% } %>
+					>Lightweight</option>
+
+					<option value="Middleweight"
+						<% if (profile.escape('weight_class') === "Middleweight") { %>
+							selected
+						<% } %>
+					>Middleweight</option>
+
+					<option value="Heavyweight"
+						<% if (profile.escape('weight_class') === "Heavyweight") { %>
+							selected
+						<% } %>
+					>Heavyweight</option>
+				</select>
+			</li>
 		</ul>
