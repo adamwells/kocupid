@@ -9,6 +9,7 @@
   <% if logged_in? %>
   	<script>
 	  		Kocupid.currentUserId = <%= current_user.id %>	
+        Kocupid.currentProfileId = <%= current_user.profile.id %>
 	  </script>
   <% end %>
   
