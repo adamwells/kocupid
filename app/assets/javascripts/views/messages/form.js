@@ -18,7 +18,7 @@ Kocupid.Views.MessageForm = Backbone.View.extend({
 		message.save([], {
 			success: function () {
 				messages.add(message);
-				window.router.navigate('/messages/' + message.id, { trigger: true });
+				$('.sent').click();
 			}
 		})
 	},

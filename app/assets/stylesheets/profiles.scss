@@ -5,6 +5,10 @@
 
 .profiles-index {
 	list-style-type: none;
+	display: inline-block;
+	background-color: #AA3939;
+	border-radius: 5px;
+	padding: 10px;
 }
 
 .profiles-index-item {
@@ -79,8 +83,9 @@
 	height: 400px;
 	left: -200px;
 	top: 100px;
-	background-color: #AA3939;
+	background-color: #550000;
 	border-radius: 5px;
+	color: #FAE1D9;
 }
 
 .search {

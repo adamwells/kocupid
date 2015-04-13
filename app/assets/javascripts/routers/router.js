@@ -3,8 +3,7 @@ Kocupid.Routers.Router = Backbone.Router.extend({
 		'' : 'profilesIndex',
 		'profiles/:id/edit' : 'editProfile',
 		'profiles/:id' : 'profileShow',
-		'messages' : 'messagesIndex',
-		'messages/:id' : 'messageShow'
+		'messages' : 'messagesIndex'
 	},
 
 	initialize: function (options) {
