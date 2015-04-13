@@ -26,5 +26,19 @@ Kocupid.Collections.Messages = Backbone.Collection.extend({
 		} else {
 			return -1
 		}
+	},
+
+	usernames: function () {
+		var usernames = [];
+		this.models.forEach(function (message) {
+			if (usernames.indexOf(message.escape('sender_username')) === -1) {
+				usernames.push(message.escape('sender_username'));
+			}
+
+			if (usernames.indexOf(message.escape('recipient_username')) === -1) {
+				usernames.push(message.escape('recipient_username'));
+			}
+		})
+		return usernames;
 	}
 });

@@ -5,6 +5,10 @@ Kocupid.Views.MessageForm = Backbone.View.extend({
 		'submit' : 'sendMessage'
 	},
 
+	initialize: function () {
+		this.listenTo(this.collection, 'sync', this.render);
+	},
+
 	sendMessage: function (event) {
 		event.preventDefault();
 		var data = this.$el.serializeJSON();
@@ -20,7 +24,7 @@ Kocupid.Views.MessageForm = Backbone.View.extend({
 	},
 
 	render: function () {
-		var content = this.template();
+		var content = this.template({ usernames: JSON.stringify(this.collection.usernames())});
 		this.$el.html(content);
 		return this;
 	}
