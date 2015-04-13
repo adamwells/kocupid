@@ -1,7 +1,11 @@
 <h3>Find me:</h3>
 
 <form class="search-form">
-	<input name="username" type="text" class="form-control form-group" placeholder="Search by username"></input>
+	<input name="username" 
+				 type="text" 
+				 class="username-input form-control form-group" 
+				 placeholder="Search by username">
+	</input>
 
 	<select name="style" class="form-control form-group">
 		<option value="" disabled selected>Style</option>
@@ -31,3 +35,15 @@
 
 	<button class="search btn btn-large btn-primary">Search</button>
 </form>
+
+<script>
+
+
+  $(function() {
+    $( ".username-input" ).autocomplete({
+      source: ['this', 'that']
+    });
+  });
+
+  //$.getJSON(<%= usernames %>)
+</script>

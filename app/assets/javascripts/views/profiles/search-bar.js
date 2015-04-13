@@ -26,8 +26,16 @@ Kocupid.Views.SearchBar = Backbone.View.extend({
 		}
 	},
 
+	usernameSuggestions: function () {
+		var usernames = [];
+		this.fullCollection.each(function (profile) {
+			usernames.push(profile.escape('username'));
+		});
+		return usernames;
+	},
+
 	render: function () {
-		var content = this.template();
+		var content = this.template({ usernames: JSON.stringify(this.usernameSuggestions()) });
 		this.$el.html(content);
 		return this;
 	}

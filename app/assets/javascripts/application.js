@@ -19,6 +19,7 @@
 //= require kocupid
 //= require jquery.serializejson
 //= require typed
+//= require jquery-ui
 //= require_tree ../templates
 //= require_tree ./models
 //= require_tree ./collections

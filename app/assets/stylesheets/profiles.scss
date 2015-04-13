@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 .profiles-index {
 	list-style-type: none;
 }
@@ -17,7 +18,7 @@
 	margin: 6px;
 	text-align: center;
 	transition: background-color 100ms;
-	transition: color 100ms;
+	transition: color 50ms;
 }
 
 .profiles-index-item:hover {
@@ -40,10 +41,6 @@
 	padding: 0px;
 }
 
-.username:hover {
-	cursor: pointer;
-}
-
 .profile-photo {
 	width: 200px;
 	height: 130px;
@@ -58,6 +55,10 @@
 .actions {
 	float: right;
 	padding: 20px;
+}
+
+.action {
+	width: 100%;
 }
 
 .features {
@@ -79,4 +80,16 @@
 	top: 100px;
 	background-color: #AA3939;
 	border-radius: 5px;
+}
+
+.search {
+	float: right;
+}
+
+.about-me {
+	color: black;
+}
+
+.looking-for {
+	color: black;
 }
