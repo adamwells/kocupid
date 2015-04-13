@@ -19,7 +19,7 @@ STYLES = ['Boxer', 'Wrestler', 'MMA Fighter', 'Other']
 
 WEIGHT_CLASSES = ['Featherweight', 'Lightweight', 'Middleweight', 'Heavyweight']
 
-BODY_TYPES = ['Tank']
+BODY_TYPES = ['Tank', 'Flimsy', 'Built', 'Stacked', 'Jacked', 'Yoked']
 
 GENDERS = ['Male', 'Female']
 

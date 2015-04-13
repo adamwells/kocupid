@@ -15,11 +15,42 @@
 			<li class="body_type list-group-item">
 				<select name="body_type" class="form-control">
 					<option value="" disabled selected>Body Type</option>
+					
 					<option value="Tank"
 						<% if (profile.escape('body_type') === "Tank") { %>
 							selected
 						<% } %>
 					>Tank</option>
+
+					<option value="Flimsy"
+						<% if (profile.escape('body_type') === "Flimsy") { %>
+							selected
+						<% } %>
+					>Flimsy</option>
+
+					<option value="Built"
+						<% if (profile.escape('body_type') === "Built") { %>
+							selected
+						<% } %>
+					>Built</option>
+
+					<option value="Stacked"
+						<% if (profile.escape('body_type') === "Stacked") { %>
+							selected
+						<% } %>
+					>Stacked</option>
+
+					<option value="Jacked"
+						<% if (profile.escape('body_type') === "Jacked") { %>
+							selected
+						<% } %>
+					>Jacked</option>
+
+					<option value="Yoked"
+						<% if (profile.escape('body_type') === "Yoked") { %>
+							selected
+						<% } %>
+					>Yoked</option>
 				</select>
 			</li>
 
