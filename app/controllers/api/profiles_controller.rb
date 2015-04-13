@@ -14,19 +14,41 @@ module Api
 		end
 
 		def update
-			@profile = Profile.find(params[:id])
-			@user = @profile.user
+			if current_user.profile.id = params[:id]
+				@profile = Profile.find(params[:id])
+				@user = @profile.user
 
-			@user.update(user_params)
-			@profile.update(profile_params)
+				@user.update(user_params)
+				@profile.update(profile_params)
 
-			render :show
+				render :show
+			else
+				render json: "Nice try."
+			end
 		end
 
 		private
 
 		def profile_params
-			params.require(:profile).permit(:style)
+			puts "THIS IS WHERE WE ARE"
+			p params[:looking_for_wrestler]
+
+			params.require(:profile).permit(:style,
+																			:height,
+																			:weight,
+																			:self_summary,
+																			:good_at,
+																			:message_if,
+																			:looking_for_wrestler,
+																			:looking_for_boxer,
+																			:looking_for_mma_fighter,
+																			:looking_for_other_styles,
+																			:looking_for_men,
+																			:looking_for_women,
+																			:looking_for_sparring_partner,
+																			:looking_for_opponent,
+																			:body_type,
+																			:weight_class)
 		end
 
 		def user_params

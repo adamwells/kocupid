@@ -4,7 +4,7 @@
 		<ul class="profile-looking-for-fighter-types profile-list">
 			<label>
 				<input type="checkbox" name="looking_for_wrestler"
-					<% if (profile.escape('looking_for_wrestler')) { %>
+					<% if (profile.escape('looking_for_wrestler') === 'true') { %>
 						checked="checked"
 					<% } %>
 				> Wrestlers
@@ -12,7 +12,7 @@
 
 			<label>
 				<input type="checkbox" name="looking_for_boxer"
-					<% if (profile.escape('looking_for_boxer')) { %>
+					<% if (profile.escape('looking_for_boxer') === 'true') { %>
 						checked="checked"
 					<% } %>
 				> Boxers
@@ -20,7 +20,7 @@
 
 			<label>
 				<input type="checkbox" name="looking_for_mma_fighter"
-					<% if (profile.escape('looking_for_mma_fighter')) { %>
+					<% if (profile.escape('looking_for_mma_fighter') === 'true') { %>
 						checked="checked"
 					<% } %>
 				> MMA Fighters
@@ -28,7 +28,7 @@
 
 			<label>
 				<input type="checkbox" name="looking_for_other_styles"
-					<% if (profile.escape('looking_for_other_styles')) { %>
+					<% if (profile.escape('looking_for_other_styles') === 'true') { %>
 						checked="checked"
 					<% } %>
 				> Other
@@ -39,7 +39,7 @@
 		<ul class="profile-looking-for-gender profile-list">
 			<label>
 				<input type="checkbox" name="looking_for_men"
-					<% if (profile.escape('looking_for_men')) { %>
+					<% if (profile.escape('looking_for_men') === 'true') { %>
 						checked="checked"
 					<% } %>
 				> Men
@@ -47,7 +47,7 @@
 
 			<label>
 				<input type="checkbox" name="looking_for_women"
-					<% if (profile.escape('looking_for_women')) { %>
+					<% if (profile.escape('looking_for_women') === 'true') { %>
 						checked="checked"
 					<% } %>
 				> Women
@@ -58,7 +58,7 @@
 		<ul class="profile-looking-for-partner-type profile-list">
 			<label>
 				<input type="checkbox" name="looking_for_sparring_partner"
-					<% if (profile.escape('looking_for_sparring_partner')) { %>
+					<% if (profile.escape('looking_for_sparring_partner') === 'true') { %>
 						checked="checked"
 					<% } %>
 				> Sparring Partners
@@ -66,7 +66,7 @@
 
 			<label>
 				<input type="checkbox" name="looking_for_opponent"
-					<% if (profile.escape('looking_for_opponent')) { %>
+					<% if (profile.escape('looking_for_opponent') === 'true') { %>
 						checked="checked"
 					<% } %>
 				> Opponents

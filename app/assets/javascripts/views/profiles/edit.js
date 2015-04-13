@@ -11,13 +11,23 @@ Kocupid.Views.EditProfile = Backbone.CompositeView.extend ({
 
 	submitForm: function (event) {
 		event.preventDefault();
-		var data = this.$el.serializeJSON();
+		var data = this.$el.serializeJSON({checkboxUncheckedValue: "off"});
 
 		for (var k in data) {
 			if (!data[k]) {
 				delete data[k];
 			}
+
+			if (data[k] === "on") {
+				data[k] = true;
+			}
+
+			if (data[k] === "off") {
+				data[k] = false;
+			}			
 		}
+
+		console.log(data);
 
 		this.model.save(data, {
 			success: function () {
