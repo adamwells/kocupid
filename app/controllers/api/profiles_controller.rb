@@ -48,7 +48,8 @@ module Api
 																			:looking_for_sparring_partner,
 																			:looking_for_opponent,
 																			:body_type,
-																			:weight_class)
+																			:weight_class,
+																			:photo_url)
 		end
 
 		def user_params

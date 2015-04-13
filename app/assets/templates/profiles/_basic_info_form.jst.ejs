@@ -1,7 +1,8 @@
 <div class="basic-info">
 	<input class="form-control" 
 				 name="username" 
-				 value="<%= profile.escape('username') %>">
+				 value="<%= profile.escape('username') %>"
+				 placeholder="Username">
 
 	<select name="style" class="form-control form-group">
 		<option value="" disabled selected>Style</option>
@@ -30,4 +31,10 @@
 						<% } %>
 						>Other</option>
 	</select>
+	
+	<label>Photo Url:
+	<input class="form-control"
+				 name="photo_url"
+				 value="<%= profile.escape('photo_url') %>">
+	</label>
 </div>
