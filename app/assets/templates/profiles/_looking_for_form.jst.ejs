@@ -1,0 +1,60 @@
+<div class="looking-for">
+	<h4 class="profile-header">Interested in:</h4>
+	<div class="profile-looking-for">
+		<ul class="profile-looking-for-fighter-types profile-list">
+			<label>
+				<input type="checkbox" name="looking_for_wrestler"
+					<% if (profile.escape('looking_for_wrestler')) { %>
+						checked="checked"
+					<% } %>
+				> Wrestlers
+			</label><br>
+
+			<label>
+				<input type="checkbox" name="looking_for_boxer"
+					<% if (profile.escape('looking_for_boxer')) { %>
+						checked="checked"
+					<% } %>
+				> Boxers
+			</label><br>
+
+			<label>
+				<input type="checkbox" name="looking_for_mma_fighter"
+					<% if (profile.escape('looking_for_mma_fighter')) { %>
+						checked="checked"
+					<% } %>
+				> MMA Fighters
+			</label><br>
+
+			<label>
+				<input type="checkbox" name="looking_for_other_styles"
+					<% if (profile.escape('looking_for_other_styles')) { %>
+						checked="checked"
+					<% } %>
+				> Other
+			</label><br>
+		</ul>
+
+		<h5 class="looking-for-header">Prefers:</h5>
+		<ul class="profile-looking-for-gender profile-list">
+			<% if (profile.escape('looking_for_men')) { %>
+				<li>Men</li>
+			<% } %>
+
+			<% if (profile.escape('looking_for_women')) { %>
+				<li>Women</li>
+			<% } %>
+		</ul>
+
+		<h5 class="looking-for-header">Looking For:</h5>
+		<ul class="profile-looking-for-partner-type profile-list">
+			<% if (profile.escape('looking_for_sparring_partner')) { %>
+				<li>Sparring partners</li>
+			<% } %>
+
+			<% if (profile.escape('looking_for_opponent')) { %>
+				<li>Opponents</li>
+			<% } %>
+		</ul>
+	</div>
+</div>

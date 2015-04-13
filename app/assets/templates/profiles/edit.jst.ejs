@@ -23,14 +23,8 @@
 	<hr>
 
 	<div class="features">
-	<h4 class="profile-header">Features</h4>
-		<ul class="profile-features profile-list list-group">
-			<li class="height list-group-item">Height: <%= profile.escape('height') %></li>
-			<li class="weight list-group-item">Weight: <%= profile.escape('weight') %></li>
-			<li class="body_type list-group-item">Body Type: <%= profile.escape('body_type') %></li>
-			<li class="weight_class list-group-item">Weight Class: <%= profile.escape('weight_class') %></li>
-		</ul>
+		<%= JST['profiles/_features_form']({ profile: profile }) %>
 	</div>
 
-	<%= JST['profiles/_looking_for']({ profile: profile }) %>
+	<%= JST['profiles/_looking_for_form']({ profile: profile }) %>
 </div>
