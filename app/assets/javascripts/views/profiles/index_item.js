@@ -4,7 +4,7 @@ Kocupid.Views.ProfilesIndexItem = Backbone.View.extend({
 	className: 'profiles-index-item',
 
 	events: {
-		'click .username' : 'visitProfile'
+		'click' : 'visitProfile'
 	},
 
 	visitProfile: function (event) {
