@@ -1,7 +1,8 @@
 Kocupid.Views.ProfileShow = Backbone.CompositeView.extend({
 	template: JST['profiles/show'],
 	events: {
-		'click .send-message' : 'messageUser'
+		'click .send-message' : 'messageUser',
+		'click .edit' : 'editProfile'
 	},
 
 	initialize: function () {
@@ -18,6 +19,10 @@ Kocupid.Views.ProfileShow = Backbone.CompositeView.extend({
 				alert('message sent');
 			}
 		})
+	},
+
+	editProfile: function () {
+		window.router.navigate('profiles/' + this.model.id + '/edit', { trigger: true });
 	},
 
 	addLikeButton: function () {

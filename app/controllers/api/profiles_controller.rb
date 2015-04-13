@@ -12,5 +12,26 @@ module Api
 			@like_id = @like ? @like.id : nil
 			render :show
 		end
+
+		def update
+			@profile = Profile.find(params[:id])
+
+			puts "THIS IS HERE"
+			puts params
+
+			@user = @profile.user
+			@user.save!(user_params)
+			render :show
+		end
+
+		private
+
+		def profile_params
+			params.require(:profile).permit(:style)
+		end
+
+		def user_params
+			params.require(:profile).permit(:username)
+		end
 	end
 end

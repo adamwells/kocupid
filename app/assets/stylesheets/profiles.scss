@@ -55,6 +55,7 @@
 .actions {
 	float: right;
 	padding: 20px;
+	width: 250px;
 }
 
 .action {
@@ -94,14 +95,14 @@
 	color: black;
 }
 
-.edit {
+.edit, .save {
 	text-align: center;
 }
 
-.edit:hover {
+.edit:hover, .save:hover {
 	cursor: pointer;
 }
 
-.edit-profile-button {
+.edit-profile-button, .save-profile-button {
 	font-size: 40px;
 }

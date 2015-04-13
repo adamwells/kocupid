@@ -7,11 +7,13 @@
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	        <h4 class="modal-title">New Message to <%= profile.escape('username') %></h4>
 	      </div>
+
 	      <div class="modal-body">
 	      	<form>
 	        	<textarea placeholder="Message..." name="body" class="form-control"></textarea>
 	        </form>
 	      </div>
+
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 	        <button type="button" class="send-message btn btn-primary">Send Message</button>
@@ -23,7 +25,7 @@
 	<!-- the visible page is below this line -->
 	<div class="actions">
 		<% if (profile.get('id') !== Kocupid.currentProfileId) { %>
-			<button data-toggle="modal" href="#myModal" class="action btn btn-default btn-primary">Message Fighter</button>
+			<button data-toggle="modal" href="#myModal" class="action btn btn-default btn-primary"><span class="glyphicon glyphicon-envelope"></span> Message Fighter</button>
 			<div class="action like-toggle-button"></div>
 		<% } %>
 
