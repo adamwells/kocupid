@@ -10,17 +10,21 @@
 	display: block;
 	float: left;
 	background-color: #801515;
+	color: #FAE1D9;
 	border-radius: 5px;
 	width: 30%;
 	height: 300px;
 	margin: 6px;
 	text-align: center;
 	transition: background-color 100ms;
+	transition: color 100ms;
+	
 }
 
 .profiles-index-item:hover {
 	background-color: #FFAAAA;
 	cursor: pointer;
+	color: black;
 }
 
 .index-item-photo {
