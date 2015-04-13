@@ -35,7 +35,7 @@ Kocupid.Views.ProfilesIndex = Backbone.CompositeView.extend({
 
 	render: function () {
 		var content = this.template({ profiles: this.shownItems });
-		this.shownItems.set(this.collection.models)
+		this.shownItems.set(this.collection.models);
 		this.$el.html(content);
 		this.attachSubviews();
 		return this;

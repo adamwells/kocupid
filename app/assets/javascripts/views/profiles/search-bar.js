@@ -7,6 +7,7 @@ Kocupid.Views.SearchBar = Backbone.View.extend({
 
 	initialize: function (options) {
 		this.fullCollection = options.fullCollection;
+		this.usernames = this.fullCollection.usernames();
 	},
 
 	search: function (event) {
@@ -27,7 +28,6 @@ Kocupid.Views.SearchBar = Backbone.View.extend({
 
 	render: function () {
 		var usernames = JSON.stringify(this.fullCollection.usernames());
-		console.log(usernames)
 		var content = this.template({ usernames: usernames });
 		this.$el.html(content);
 		return this;
