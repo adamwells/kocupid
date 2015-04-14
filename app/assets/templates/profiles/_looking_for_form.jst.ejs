@@ -52,6 +52,14 @@
 					<% } %>
 				> Women
 			</label><br>
+
+			<label>
+				<input type="checkbox" name="looking_for_other_genders"
+					<% if (profile.escape('looking_for_other_genders') === 'true') { %>
+						checked="checked"
+					<% } %>
+				> Other Gender Identities
+			</label><br>
 		</ul>
 
 		<h5 class="looking-for-header">Looking For:</h5>

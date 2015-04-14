@@ -25,6 +25,7 @@
 #  updated_at                   :datetime         not null
 #  gender                       :string
 #  birth_date                   :date
+#  looking_for_other_genders    :boolean          default(TRUE)
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

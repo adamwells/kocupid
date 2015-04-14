@@ -45,6 +45,7 @@ module Api
 																			:looking_for_other_styles,
 																			:looking_for_men,
 																			:looking_for_women,
+																			:looking_for_other_genders,
 																			:looking_for_sparring_partner,
 																			:looking_for_opponent,
 																			:body_type,
