@@ -29,4 +29,22 @@
 
 class Profile < ActiveRecord::Base
 	belongs_to :user
+
+	def compatibility_points(user)
+		points = 0
+		profile = user.profile
+
+		points += 1 if profile.looking_for_wrestler && self.style == "Wrestler"
+		points += 1 if profile.looking_for_boxer && self.style == "Boxer"
+		points += 1 if profile.looking_for_mma_fighter && self.style == "MMA Fighter"
+		points += 1 if profile.looking_for_other_styles && self.style == "Other"
+
+		points += 1 if profile.looking_for_men && self.style == "Male"
+		points += 1 if profile.looking_for_women && self.style == "Female"
+
+		points += 1 if profile.looking_for_opponent && self.looking_for_opponent
+		points += 1 if profile.looking_for_sparring_partner && self.looking_for_sparring_partner
+
+		points
+	end
 end
