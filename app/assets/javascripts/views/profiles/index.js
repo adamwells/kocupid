@@ -2,6 +2,8 @@ Kocupid.Views.ProfilesIndex = Backbone.CompositeView.extend({
 	template: JST['profiles/index'],
 
 	initialize: function () {
+		this.collection.fetch();
+
 		this.shownItems = new Kocupid.Collections.Profiles();
 		this.addSearchBar();
 		this.addProfiles();

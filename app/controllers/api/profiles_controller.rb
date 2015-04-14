@@ -4,6 +4,8 @@ module Api
 			@profiles = Profile.where.not(id: current_user.profile.id)
 			@profiles = @profiles.sort_by { |a| -a.compatibility_points(current_user) }
 
+			@bookmarks = current_user.bookmarks
+
 			render :index
 		end
 

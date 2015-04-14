@@ -21,6 +21,8 @@ Kocupid.Views.SearchBar = Backbone.View.extend({
 		for (var k in data) {
 			if (!data[k]) {
 				delete data[k];
+			} else if (data[k] === 'true') {
+				data[k] = true;
 			}
 		}
 
