@@ -10,8 +10,13 @@ module Api
 		def show
 			@profile = Profile.find(params[:id])
 			@user = @profile.user
+
 			@like = Like.find_by({ likee_id: @user.id, liker_id: current_user.id })
 			@like_id = @like ? @like.id : nil
+
+			@bookmark = Bookmark.find_by({ bookmarkee_id: @user.id, bookmarker_id: current_user.id })
+			@bookmark_id = @bookmark ? @bookmark.id : nil
+
 			render :show
 		end
 

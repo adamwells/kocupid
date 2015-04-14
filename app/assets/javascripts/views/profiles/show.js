@@ -8,6 +8,7 @@ Kocupid.Views.ProfileShow = Backbone.CompositeView.extend({
 	initialize: function () {
 		this.listenTo(this.model, 'sync change', this.render);
 		this.listenTo(this.model, 'sync', this.addLikeButton);
+		this.listenTo(this.model, 'sync', this.addBookmarkButton);
 	},
 
 	messageUser: function () {
@@ -28,6 +29,11 @@ Kocupid.Views.ProfileShow = Backbone.CompositeView.extend({
 	addLikeButton: function () {
 		var likeButton = new Kocupid.Views.LikeButton({ model: this.model });
 		this.addSubview('.like-toggle-button', likeButton);
+	},
+
+	addBookmarkButton: function () {
+		var bookmarkButton = new Kocupid.Views.BookmarkButton({ model: this.model });
+		this.addSubview('.bookmark-toggle-button', bookmarkButton);
 	},
 
 	render: function () {
