@@ -35,11 +35,13 @@
 	color: black;
 }
 
-.close-message-button, .view-message-button {
+.close-message-button, .view-message-button, .delete-message-button {
 	float: right;
 	font-size: 25px;
 }
 
-.close-message-button:hover, .view-message-button {
+
+
+.close-message-button:hover, .view-message-button:hover, .delete-message-button:hover {
 	cursor: pointer;
 }

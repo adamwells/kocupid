@@ -3,19 +3,28 @@ Kocupid.Views.MessagesIndexItem = Backbone.View.extend({
 	tagName: 'li',
 	className: 'messages-index-item',
 	events: {
-		'click :not(.close-message-button)' : 'showMessage',
+		'click :not(.close-message-button, .delete-message-button)' : 'showMessage',
 		'click .close-message-button' : 'render',
+		'click .delete-message-button' : 'deleteMessage',
 		'click .send' : 'sendReply'
 	},
 
 	initialize: function () {
 		this.listenTo(this.model, 'sync', this.render);
+		this.expanded = false;
 	},
 
-	showMessage: function () {
-		var content = JST['messages/show']({ message: this.model });
-		this.$el.html(content);
-		return this;
+	showMessage: function (event) {
+		if (!this.expanded) {
+			var content = JST['messages/show']({ message: this.model });
+			this.$el.html(content);
+			this.expanded = true;
+			return this;	
+		}
+	},
+
+	deleteMessage: function () {
+		console.log('deleted');
 	},
 
 	sendReply: function (event) {
@@ -43,6 +52,7 @@ Kocupid.Views.MessagesIndexItem = Backbone.View.extend({
 	render: function () {
 		var content = this.template({ message: this.model });
 		this.$el.html(content);
+		this.expanded = false;
 		return this;
 	}
 });
