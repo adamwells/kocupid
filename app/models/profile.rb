@@ -39,8 +39,9 @@ class Profile < ActiveRecord::Base
 		points += 1 if profile.looking_for_mma_fighter && self.style == "MMA Fighter"
 		points += 1 if profile.looking_for_other_styles && self.style == "Other"
 
-		points += 1 if profile.looking_for_men && self.style == "Male"
-		points += 1 if profile.looking_for_women && self.style == "Female"
+		points += 1 if profile.looking_for_men && self.gender == "Male"
+		points += 1 if profile.looking_for_women && self.gender == "Female"
+		points += 1 if profile.looking_for_other_genders && self.gender == "Other"
 
 		points += 1 if profile.looking_for_opponent && self.looking_for_opponent
 		points += 1 if profile.looking_for_sparring_partner && self.looking_for_sparring_partner
