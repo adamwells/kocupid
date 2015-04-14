@@ -1,8 +1,12 @@
 Kocupid.Views.ProfilesIndex = Backbone.CompositeView.extend({
 	template: JST['profiles/index'],
+	events: {
+		'click .load' : 'load'
+	},
 
 	initialize: function () {
-		this.collection.fetch();
+		this.page = 0;
+		this.collection.fetch({ data: { page_number: this.page }});
 
 		this.shownItems = new Kocupid.Collections.Profiles();
 		this.addSearchBar();
@@ -33,6 +37,12 @@ Kocupid.Views.ProfilesIndex = Backbone.CompositeView.extend({
 		this.shownItems.each(function (profile) {
 			this.addProfile(profile);
 		}.bind(this));
+	},
+
+	load: function () {
+		this.page += 1;
+		this.collection.fetch({ data: { page_number: this.page }});
+		console.log('this')
 	},
 
 	render: function () {

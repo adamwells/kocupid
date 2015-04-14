@@ -59,7 +59,7 @@ Add a Backbone form at the top of the matches page to add search criteria.  Upda
 
 ## Bonus Features
 - [ ] Interactive introduction to the site
-- [ ] Bookmark other users (view bookmarks index)
+- [x] Bookmark other users (view bookmarks index)
 - [ ] Profile formatting using markdown
 - [ ] Colored line at bottom of user index items (based on responsiveness)
 - [ ] View visitors

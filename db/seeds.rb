@@ -25,13 +25,13 @@ GENDERS = ['Male', 'Female', 'Other']
 
 User.create!(email: 'rhonda.rousey@strikeforce.net', username: 'rhonda.rousey', password: 'rhondapassword')
 
-21.times do
+100.times do
 	User.create!(email: Faker::Internet.email,
 							 username: Faker::Internet.user_name, 
 							 password: Faker::Internet.password)
 end
 
-22.times do |i|
+101.times do |i|
 	Profile.create!(user_id: User.all[i].id,
 									self_summary: Faker::Lorem.paragraph,
 									good_at: Faker::Lorem.paragraph,
@@ -55,7 +55,7 @@ end
 									)
 end
 
-50.times do
+500.times do
 	liker_id = User.all[rand(21)].id
 	likee_id = User.all[rand(21)].id
 	if !Like.find_by(liker_id: liker_id, likee_id: likee_id)
@@ -63,7 +63,7 @@ end
 	end
 end
 
-150.times do
+1500.times do
 	Message.create!(sender_id: User.all[rand(21)].id, 
 									recipient_id: User.all[rand(21)].id,
 									body: Faker::Lorem.paragraph)

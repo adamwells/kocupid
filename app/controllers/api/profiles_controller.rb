@@ -4,6 +4,12 @@ module Api
 			@profiles = Profile.where.not(id: current_user.profile.id)
 			@profiles = @profiles.sort_by { |a| -a.compatibility_points(current_user) }
 
+			if params[:page_number]
+				page_num = params[:page_number].to_i
+				page_size = 30;
+				@profiles = @profiles[((page_num * page_size))..(page_num * page_size + page_size - 1)]
+			end
+
 			@bookmarks = current_user.bookmarks
 
 			render :index
