@@ -24,6 +24,7 @@
 #  created_at                   :datetime         not null
 #  updated_at                   :datetime         not null
 #  gender                       :string
+#  birth_date                   :date
 #
 
 require 'test_helper'

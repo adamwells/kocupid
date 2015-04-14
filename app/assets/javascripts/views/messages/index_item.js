@@ -3,7 +3,7 @@ Kocupid.Views.MessagesIndexItem = Backbone.View.extend({
 	tagName: 'li',
 	className: 'messages-index-item',
 	events: {
-		'click :not(.close-message-button, .delete-message-button)' : 'showMessage',
+		'click :not(.close-message-button)' : 'showMessage',
 		'click .close-message-button' : 'render',
 		'click .delete-message-button' : 'deleteMessage',
 		'click .send' : 'sendReply'
@@ -25,6 +25,11 @@ Kocupid.Views.MessagesIndexItem = Backbone.View.extend({
 
 	deleteMessage: function () {
 		console.log('deleted');
+		this.model.destroy({
+			success: function () {
+				this.remove();
+			}.bind(this)
+		});
 	},
 
 	sendReply: function (event) {
