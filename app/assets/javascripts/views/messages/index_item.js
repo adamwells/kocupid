@@ -3,7 +3,7 @@ Kocupid.Views.MessagesIndexItem = Backbone.View.extend({
 	tagName: 'li',
 	className: 'messages-index-item',
 	events: {
-		'click .view-message-button' : 'showMessage',
+		'click :not(.close-message-button)' : 'showMessage',
 		'click .close-message-button' : 'render',
 		'click .send' : 'sendReply'
 	},
