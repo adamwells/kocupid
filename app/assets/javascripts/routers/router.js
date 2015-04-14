@@ -20,7 +20,7 @@ Kocupid.Routers.Router = Backbone.Router.extend({
 	},
 
 	profileShow: function (id) {
-		var profile = this.profiles.getOrFetch(id);
+		var profile = this.profiles.getOrFetch(id);	
 		var profileShow = new Kocupid.Views.ProfileShow({ model: profile });
 		this._swapView(profileShow);
 	},

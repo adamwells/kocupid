@@ -21,7 +21,7 @@ WEIGHT_CLASSES = ['Featherweight', 'Lightweight', 'Middleweight', 'Heavyweight']
 
 BODY_TYPES = ['Tank', 'Flimsy', 'Built', 'Stacked', 'Jacked', 'Yoked']
 
-GENDERS = ['Male', 'Female']
+GENDERS = ['Male', 'Female', 'Other']
 
 User.create!(email: 'rhonda.rousey@strikeforce.net', username: 'rhonda.rousey', password: 'rhondapassword')
 
@@ -43,7 +43,16 @@ end
 									weight_class: WEIGHT_CLASSES.sample,
 									gender: GENDERS.sample,
 									photo_url: PHOTOS.sample,
-									birth_date: Faker::Time.between(60.years.ago, 20.years.ago).to_date)
+									birth_date: Faker::Time.between(60.years.ago, 20.years.ago).to_date,
+									looking_for_wrestler: (rand(2) > 0),
+									looking_for_boxer: (rand(2) > 0),
+									looking_for_mma_fighter: (rand(2) > 0),
+									looking_for_other_styles: (rand(2) > 0),
+									looking_for_men: (rand(2) > 0),
+									looking_for_women: (rand(2) > 0),
+									looking_for_sparring_partner: (rand(2) > 0),
+									looking_for_opponent: (rand(2) > 0)
+									)
 end
 
 50.times do

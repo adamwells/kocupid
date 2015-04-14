@@ -17,12 +17,14 @@ liker_id        | integer   | not null, foreign key
 likee_id        | integer   | not null, foreign key
 
 ## messages
-column_name     | data_type | details
-----------------|-----------|------------------
-id              | integer   | not null, primary key
-sender_id       | integer   | not null, foreign key
-recipient_id    | integer   | not null, foreign key
-body            | text      | not null
+column_name          | data_type | details
+---------------------|-----------|------------------
+id                   | integer   | not null, primary key
+sender_id            | integer   | not null, foreign key
+recipient_id         | integer   | not null, foreign key
+body                 | text      | not null
+visible_to_sender    | boolean   | default: true
+visible_to_recipient | boolean   | default: true
 
 ## profiles
 column_name                  | data_type | details

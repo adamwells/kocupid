@@ -2,41 +2,41 @@
 	<h4 class="profile-header">Interested in:</h4>
 	<div class="profile-looking-for">
 		<ul class="profile-looking-for-fighter-types profile-list">
-			<% if (profile.escape('looking_for_wrestler')) { %>
+			<% if (profile.escape('looking_for_wrestler') === 'true') { %>
 				<li>Wrestlers</li>
 			<% } %>
 
-			<% if (profile.escape('looking_for_boxer')) { %>
+			<% if (profile.escape('looking_for_boxer') === 'true') { %>
 				<li>Boxers</li>
 			<% } %>
 
-			<% if (profile.escape('looking_for_mma_fighter')) { %>
+			<% if (profile.escape('looking_for_mma_fighter') === 'true') { %>
 				<li>MMA Fighters</li>
 			<% } %>
 
-			<% if (profile.escape('looking_for_other_styles')) { %>
+			<% if (profile.escape('looking_for_other_styles') === 'true') { %>
 				<li>Other Styles</li>
 			<% } %>
 		</ul>
 
 		<h5 class="looking-for-header">Prefers:</h5>
 		<ul class="profile-looking-for-gender profile-list">
-			<% if (profile.escape('looking_for_men')) { %>
+			<% if (profile.escape('looking_for_men') === 'true') { %>
 				<li>Men</li>
 			<% } %>
 
-			<% if (profile.escape('looking_for_women')) { %>
+			<% if (profile.escape('looking_for_women') === 'true') { %>
 				<li>Women</li>
 			<% } %>
 		</ul>
 
 		<h5 class="looking-for-header">Looking For:</h5>
 		<ul class="profile-looking-for-partner-type profile-list">
-			<% if (profile.escape('looking_for_sparring_partner')) { %>
+			<% if (profile.escape('looking_for_sparring_partner') === 'true') { %>
 				<li>Sparring partners</li>
 			<% } %>
 
-			<% if (profile.escape('looking_for_opponent')) { %>
+			<% if (profile.escape('looking_for_opponent') === 'true') { %>
 				<li>Opponents</li>
 			<% } %>
 		</ul>

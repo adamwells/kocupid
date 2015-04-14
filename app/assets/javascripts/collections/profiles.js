@@ -10,7 +10,9 @@ Kocupid.Collections.Profiles = Backbone.Collection.extend({
 			profile = new Kocupid.Models.Profile({ id: id });
 			profile.fetch({
 				success: function () {
-					profiles.add(profile);
+					if (profile.id !== Kocupid.currentProfileId) {
+						profiles.add(profile);	
+					}
 				}
 			});
 		} else {
