@@ -2,7 +2,8 @@ Kocupid.Views.SearchBar = Backbone.View.extend({
 	template: JST['profiles/search_bar'],
 	tagName: 'div',
 	events: {
-		'submit' : 'search'
+		'submit' : 'search',
+		'change .form-control' : 'search'
 	},
 
 	initialize: function (options) {
@@ -14,7 +15,7 @@ Kocupid.Views.SearchBar = Backbone.View.extend({
 	search: function (event) {
 		this.collection.set(this.fullCollection.models);
 
-		event.preventDefault();
+		event && event.preventDefault();
 		var data = this.$('form').serializeJSON();
 		for (var k in data) {
 			if (!data[k]) {
@@ -29,7 +30,7 @@ Kocupid.Views.SearchBar = Backbone.View.extend({
 
 	render: function () {
 		var usernames = JSON.stringify(this.fullCollection.usernames());
-		var content = this.template({ usernames: usernames });
+		var content = this.template({ usernames: usernames, navbar: this });
 		this.$el.html(content);
 		return this;
 	}

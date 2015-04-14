@@ -34,9 +34,6 @@ module Api
 		private
 
 		def profile_params
-			puts "THIS IS WHERE WE ARE"
-			p params[:looking_for_wrestler]
-
 			params.require(:profile).permit(:style,
 																			:height,
 																			:weight,

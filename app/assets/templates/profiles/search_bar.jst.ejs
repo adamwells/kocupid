@@ -1,12 +1,6 @@
 <h3>Find me:</h3>
 
 <form class="search-form">
-	<input name="username" 
-				 type="text" 
-				 class="username-input form-control form-group" 
-				 placeholder="Search by username">
-	</input>
-
 	<select name="style" class="form-control form-group">
 		<option value="" disabled selected>Style</option>
 		<option value="Boxer">Boxer</option>
@@ -30,10 +24,15 @@
 		<option value="Lightweight">Lightweight</option>
 		<option value="Middleweight">Middleweight</option>
 		<option value="Heavyweight">Heavyweight</option>
-		<option value="">Any Weight Class</option>
+		<option value="">Any</option>
 	</select>
-
-	<button class="search btn btn-large btn-primary">Search</button>
+	
+	<div class="input-group">
+		<input type="text" class="form-control username-input" name="username" placeholder="Username">
+		<span class="input-group-btn">
+			<button class="search btn btn-default" type="button">GO</button>
+		</span>
+	</div>	
 </form>
 
 <script>
