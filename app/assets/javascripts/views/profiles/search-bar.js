@@ -3,6 +3,7 @@ Kocupid.Views.SearchBar = Backbone.View.extend({
 	tagName: 'div',
 	events: {
 		'submit' : 'search',
+		'click .search' : 'search',
 		'change .form-control' : 'search'
 	},
 
