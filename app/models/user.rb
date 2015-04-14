@@ -26,6 +26,12 @@ class User < ActiveRecord::Base
 	has_many :sent_messages, class_name: 'Message', foreign_key: :sender_id
 	has_many :received_messages, class_name: 'Message', foreign_key: :recipient_id
 
+	has_many :bookmarks, class_name: 'Bookmark', foreign_key: :bookmarker_id
+	has_many :bookmarkings, class_name: 'Bookmark', foreign_key: :bookmarkee_id
+
+	has_many :bookmarkees, through: :bookmarks
+	has_many :bookmarkers, through: :bookmarkings
+
 	has_one :profile, dependent: :destroy
 
 	def self.generate_session_token

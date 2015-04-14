@@ -2,7 +2,6 @@ module Api
 	class ProfilesController < ApiController
 		def index
 			@profiles = Profile.where.not(id: current_user.profile.id)
-
 			@profiles = @profiles.sort_by { |a| -a.compatibility_points(current_user) }
 
 			render :index
