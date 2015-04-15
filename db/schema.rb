@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150414185507) do
+ActiveRecord::Schema.define(version: 20150415213319) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,7 +53,6 @@ ActiveRecord::Schema.define(version: 20150414185507) do
     t.text     "self_summary"
     t.text     "good_at"
     t.text     "message_if"
-    t.integer  "height"
     t.integer  "weight"
     t.string   "body_type"
     t.string   "weight_class"
@@ -71,6 +70,8 @@ ActiveRecord::Schema.define(version: 20150414185507) do
     t.string   "gender"
     t.date     "birth_date"
     t.boolean  "looking_for_other_genders",    default: true
+    t.integer  "height_feet"
+    t.integer  "height_inches"
   end
 
   add_index "profiles", ["user_id"], name: "index_profiles_on_user_id", unique: true, using: :btree

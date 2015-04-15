@@ -21,10 +21,16 @@
 	</div>
 
 	<hr>
-
-	<div class="features">
-		<%= JST['profiles/_features_form']({ profile: profile }) %>
-	</div>
-
-	<%= JST['profiles/_looking_for_form']({ profile: profile }) %>
+	
+	<div class="row">
+		<div class="col-md-8">
+		<%= JST['profiles/_looking_for_form']({ profile: profile }) %>
+		</div>
+		
+		<div class="col-md-4">
+			<div class="features">
+				<%= JST['profiles/_features_form']({ profile: profile }) %>
+			</div>
+		</div>
+	</div>	
 </div>

@@ -41,7 +41,7 @@ module Api
 
 				render :show
 			else
-				render json: "Nice try."
+				render json: "You don't have access to that profile!"
 			end
 		end
 
@@ -49,7 +49,8 @@ module Api
 
 		def profile_params
 			params.require(:profile).permit(:style,
-																			:height,
+																			:height_feet,
+																			:height_inches,
 																			:weight,
 																			:self_summary,
 																			:good_at,
