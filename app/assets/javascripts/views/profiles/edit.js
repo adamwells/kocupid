@@ -8,6 +8,14 @@ Kocupid.Views.EditProfile = Backbone.CompositeView.extend ({
 
 	initialize: function () {
 		this.listenTo(this.model, 'sync', this.render);
+
+		this.addNavbar();
+	},
+
+	addNavbar: function () {
+		var navbar = new Kocupid.Views.Navbar();
+		this.addSubview('.navbar', navbar);
+		console.log('this')
 	},
 
 	submitForm: function (event) {
@@ -48,6 +56,7 @@ Kocupid.Views.EditProfile = Backbone.CompositeView.extend ({
 	render: function () {
 		var content = this.template({ profile: this.model });
 		this.$el.html(content);
+		this.attachSubviews();
 		return this;
 	}
 });

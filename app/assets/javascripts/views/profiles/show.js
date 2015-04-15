@@ -9,6 +9,13 @@ Kocupid.Views.ProfileShow = Backbone.CompositeView.extend({
 		this.listenTo(this.model, 'sync change', this.render);
 		this.listenTo(this.model, 'sync', this.addLikeButton);
 		this.listenTo(this.model, 'sync', this.addBookmarkButton);
+
+		this.addNavbar();
+	},
+
+	addNavbar: function () {
+		var navbar = new Kocupid.Views.Navbar();
+		this.addSubview('.navbar', navbar);
 	},
 
 	messageUser: function () {
