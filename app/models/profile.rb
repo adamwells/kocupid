@@ -50,20 +50,7 @@ class Profile < ActiveRecord::Base
 		points
 	end
 
-	def preferred_styles
-		styles = [];
-		styles << "Wrestler" if self.looking_for_wrestler
-		styles << "Boxer" if self.looking_for_boxer
-		styles << "MMA Fighter" if self.looking_for_mma_fighter
-		styles << "Other" if self.looking_for_other_styles
-		styles
-	end
-
-	def preferred_genders
-		genders = [];
-		genders << "Male" if self.looking_for_men
-		genders << "Female" if self.looking_for_women
-		genders << "Other" if self.looking_for_other_genders
-		genders
+	def age
+		return ((Time.now.to_date - self.birth_date)/365.25).to_i
 	end
 end
