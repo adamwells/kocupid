@@ -37,6 +37,20 @@
 		<option value="Yoked">Yoked</option>
 		<option value="">Any</option>
 	</select>
+	
+	<label>Age: 
+		<select name="age_start" class="form-group input-small">
+			<% for (var i = 18; i < 100; i++) { %>
+				<option value="<%= i %>"><%= i %></option>
+			<% } %>
+		</select>
+	 to: 
+		<select name="age_end" class="form-group input-small">
+			<% for (var i = 18; i < 100; i++) { %>
+				<option value="<%= i %>"><%= i %></option>
+			<% } %>
+		</select>
+	</label>
 
 	<select name="bookmarked" class="form-control form-group">
 		<option value="" selected>Anyone</option>
