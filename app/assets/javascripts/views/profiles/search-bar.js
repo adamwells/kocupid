@@ -15,6 +15,7 @@ Kocupid.Views.SearchBar = Backbone.View.extend({
 
 	search: function (event) {
 		this.collection.set(this.fullCollection.models);
+		var ageFilter = false;
 
 		event && event.preventDefault();
 		var data = this.$('form').serializeJSON();
@@ -26,9 +27,22 @@ Kocupid.Views.SearchBar = Backbone.View.extend({
 			}
 		}
 
+		var age_start = data['age_start'];
+		var age_end = data['age_end'];
+
+		delete data['age_start']
+		delete data['age_end']
+
+		this.collection.models.forEach(function (profile) {
+			if (profile.get('age') < age_start || profile.get('age') > age_end) {
+				this.collection.remove(profile)
+				ageFilter = true
+			}
+		}.bind(this));
+
 		if (!$.isEmptyObject(data)) {
 			this.collection.set(this.collection.where(data));
-		} else {
+		} else if (!ageFilter) {
 			this.collection.set([]);
 			this.collection.set(this.fullCollection.models);
 		}

@@ -38,19 +38,24 @@
 		<option value="">Any</option>
 	</select>
 	
-	<label>Age: 
-		<select name="age_start" class="form-group input-small">
-			<% for (var i = 18; i < 100; i++) { %>
-				<option value="<%= i %>"><%= i %></option>
-			<% } %>
-		</select>
-	 to: 
-		<select name="age_end" class="form-group input-small">
-			<% for (var i = 18; i < 100; i++) { %>
-				<option value="<%= i %>"><%= i %></option>
-			<% } %>
-		</select>
-	</label>
+	<div class="row">
+		<div class="col-xs-5">
+			<select name="age_start" class="form-control form-group">
+				<option value="18" selected>18</option>
+				<% for (var i = 19; i < 100; i++) { %>
+					<option value="<%= i %>"><%= i %></option>
+				<% } %>
+			</select>
+		</div>
+	 	<div class="col-xs-5">
+			<select name="age_end" class="form-control form-group">
+				<% for (var i = 18; i < 99; i++) { %>
+					<option value="<%= i %>"><%= i %></option>
+				<% } %>
+				<option value="100" selected>100</option>
+			</select>
+		</div>
+	</div>
 
 	<select name="bookmarked" class="form-control form-group">
 		<option value="" selected>Anyone</option>

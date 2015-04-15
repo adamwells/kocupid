@@ -85,6 +85,15 @@ $highlight: #BABAC3;
 
 .features {
 	float: right;
+	width: 100%;
+}
+
+.feature {
+	float: right;
+}
+
+.profile-features {
+	width: 100%;
 }
 
 .clearfix:after {
@@ -97,7 +106,7 @@ $highlight: #BABAC3;
 	position: absolute;
 	padding: 10px;
 	width: 200px;
-	height: 400px;
+	height: 420px;
 	left: -200px;
 	top: 100px;
 	background-color: $darkest;

@@ -10,6 +10,8 @@ Kocupid.Views.MessagesIndex = Backbone.CompositeView.extend({
 	initialize: function () {
 		this.listenTo(this.collection, 'sync add', this.render);
 		this.received();
+
+		this.collection.fetch();
 	},
 
 	sent: function () {

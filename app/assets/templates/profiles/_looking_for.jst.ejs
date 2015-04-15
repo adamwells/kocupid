@@ -1,7 +1,7 @@
 <div class="looking-for">
 	<h4 class="profile-header">Interested in:</h4>
 	<div class="profile-looking-for">
-		<ul class="profile-looking-for-fighter-types profile-list">
+		<!-- <ul class="profile-looking-for-fighter-types profile-list">
 			<% if (profile.escape('looking_for_wrestler') === 'true') { %>
 				<li>Wrestlers</li>
 			<% } %>
@@ -17,10 +17,11 @@
 			<% if (profile.escape('looking_for_other_styles') === 'true') { %>
 				<li>Other Styles</li>
 			<% } %>
-		</ul>
+		</ul> -->
+		<%= profile.stylePreferences() %>
 
-		<h5 class="looking-for-header">Prefers:</h5>
-		<ul class="profile-looking-for-gender profile-list">
+		<h4 class="looking-for-header">Prefers:</h4>
+		<!-- <ul class="profile-looking-for-gender profile-list">
 			<% if (profile.escape('looking_for_men') === 'true') { %>
 				<li>Men</li>
 			<% } %>
@@ -32,10 +33,11 @@
 			<% if (profile.escape('looking_for_other_genders') === 'true') { %>
 				<li>Other Gender Identities</li>
 			<% } %>
-		</ul>
+		</ul> -->
+		<%= profile.genderPreferences() %>
 
-		<h5 class="looking-for-header">Looking For:</h5>
-		<ul class="profile-looking-for-partner-type profile-list">
+		<h4 class="looking-for-header">Looking For:</h4>
+		<!-- <ul class="profile-looking-for-partner-type profile-list">
 			<% if (profile.escape('looking_for_sparring_partner') === 'true') { %>
 				<li>Sparring partners</li>
 			<% } %>
@@ -43,6 +45,8 @@
 			<% if (profile.escape('looking_for_opponent') === 'true') { %>
 				<li>Opponents</li>
 			<% } %>
-		</ul>
+		</ul> -->
+
+		<%= profile.partnerPreferences() %>
 	</div>
 </div>

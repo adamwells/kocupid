@@ -17,7 +17,7 @@ Kocupid.Views.ProfileShow = Backbone.CompositeView.extend({
 		var message = new Kocupid.Models.Message(data);
 		message.save([], {
 			success: function () {
-				alert('message sent');
+				
 			}
 		})
 	},

@@ -24,7 +24,6 @@ Kocupid.Views.MessagesIndexItem = Backbone.View.extend({
 	},
 
 	deleteMessage: function () {
-		console.log('deleted');
 		this.model.destroy({
 			success: function () {
 				this.remove();
@@ -55,7 +54,7 @@ Kocupid.Views.MessagesIndexItem = Backbone.View.extend({
 	},
 
 	render: function (event) {
-		event && event.stopPropagation();
+		event && event.stopPropagation && event.stopPropagation();
 		var content = this.template({ message: this.model });
 		this.$el.html(content);
 		this.expanded = false;

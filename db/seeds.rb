@@ -43,7 +43,7 @@ end
 									weight_class: WEIGHT_CLASSES.sample,
 									gender: GENDERS.sample,
 									photo_url: PHOTOS.sample,
-									birth_date: Faker::Time.between(60.years.ago, 20.years.ago).to_date,
+									birth_date: Faker::Time.between(100.years.ago, 18.years.ago).to_date,
 									looking_for_wrestler: (rand(2) > 0),
 									looking_for_boxer: (rand(2) > 0),
 									looking_for_mma_fighter: (rand(2) > 0),
