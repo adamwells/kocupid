@@ -20,6 +20,7 @@
 //= require jquery.serializejson
 //= require jquery-ui
 //= require typed
+//= require infiniScroll
 //= require_tree ../templates
 //= require_tree ./models
 //= require_tree ./collections

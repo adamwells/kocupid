@@ -6,9 +6,12 @@ module Api
 
 			if params[:page_number]
 				page_num = params[:page_number].to_i
-				page_size = 30;
+				page_size = 30
 				@profiles = @profiles[((page_num * page_size))..(page_num * page_size + page_size - 1)]
 			end
+
+			puts "PROFILES PARAMS"
+			puts params
 
 			@bookmarks = current_user.bookmarks
 
