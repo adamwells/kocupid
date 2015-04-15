@@ -11,7 +11,8 @@ class SessionController < ApplicationController
 			log_in!(@user)
 			redirect_to '/app'
 		else
-			render text: "That login info couldn't be found!"
+			flash.now[:errors] = ["That login information couldn't be found!"]
+			render :new
 		end
 	end
 
