@@ -71,6 +71,7 @@ Add a Backbone form at the top of the matches page to add search criteria.  Upda
 - [x] Auto-fill when searching for/messaging users
 - [x] Auto-fill when sending messages
 - [ ] Show match percentage
+- [ ] Loading spinner (when loading more users)
 
 [phase-one]: ./docs/phases/phase1.md
 [phase-two]: ./docs/phases/phase2.md

@@ -28,6 +28,9 @@ Kocupid.Views.SearchBar = Backbone.View.extend({
 
 		if (!$.isEmptyObject(data)) {
 			this.collection.set(this.collection.where(data));
+		} else {
+			this.collection.set([]);
+			this.collection.set(this.fullCollection.models);
 		}
 	},
 
