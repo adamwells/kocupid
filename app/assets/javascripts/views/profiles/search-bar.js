@@ -50,7 +50,7 @@ Kocupid.Views.SearchBar = Backbone.View.extend({
 
 	render: function () {
 		var usernames = JSON.stringify(this.fullCollection.usernames());
-		var content = this.template({ usernames: usernames, navbar: this });
+		var content = this.template({ usernames: usernames });
 		this.$el.html(content);
 		return this;
 	}
