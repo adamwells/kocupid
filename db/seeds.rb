@@ -67,5 +67,6 @@ end
 1500.times do
 	Message.create!(sender_id: User.all[rand(21)].id, 
 									recipient_id: User.all[rand(21)].id,
-									body: Faker::Lorem.paragraph)
+									body: Faker::Lorem.paragraph,
+									seen: (rand(2) > 0))
 end

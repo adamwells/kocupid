@@ -36,7 +36,8 @@ photo_url                    | string    |
 self_summary                 | text      |
 good_at                      | text      |
 message_if                   | text      |
-height                       | integer   |
+height_feet                  | integer   |
+height_inches                | integer   |
 weight                       | integer   |
 body_type                    | string    |
 weight_class                 | string    |

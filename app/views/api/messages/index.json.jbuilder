@@ -5,5 +5,6 @@ json.array! @messages do |message|
 	json.recipient_id message.recipient.id
 	json.body message.body
 	json.sent_at message.created_at
+	json.seen message.seen
 	json.id message.id
 end
