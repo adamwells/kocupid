@@ -6,6 +6,7 @@ Kocupid.Views.ProfilesIndex = Backbone.CompositeView.extend({
 
 	initialize: function () {
 		this.shownItems = new Kocupid.Collections.Profiles();
+		this.allItems = new Kocupid.Collections.Profiles();
 		this.page = 0;
 		this.load();
 
@@ -24,7 +25,7 @@ Kocupid.Views.ProfilesIndex = Backbone.CompositeView.extend({
 	},
 
 	addSearchBar: function () {
-		var searchBar = new Kocupid.Views.SearchBar({ collection: this.shownItems, fullCollection: this.collection });
+		var searchBar = new Kocupid.Views.SearchBar({ collection: this.shownItems, fullCollection: this.allItems });
 		this.addSubview('.search-bar', searchBar);
 	},
 
@@ -42,11 +43,11 @@ Kocupid.Views.ProfilesIndex = Backbone.CompositeView.extend({
 	load: function () {
 		this.collection.fetch({ data: { page_number: this.page },
 			success: function () {
-				this.shownItems.add(this.collection.models);
+				this.allItems.add(this.collection.models);
+				this.subviews('.search-bar')[0].search();
 			}.bind(this)
 		});
 		this.page += 1;
-		console.log(this.page)
 	},
 
 	something: function () {
