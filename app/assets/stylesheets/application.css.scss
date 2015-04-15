@@ -17,14 +17,27 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$text-dark: #04012E;
+$text-light: #CFCFD1;
+$darkest: #08053F;
+$darker: #18145B;
+$root: #363377;
+$lighter: #5F5C92;
+$lightest: #9391AE;
+$highlight: #BABAC3;
+
+
 body {
-	background-color: #D46A6A;
+	background-color: $lightest;
 	overflow: scroll;
 }
 
 .page-content {
-	background-color: #AA3939;
+	background-color: $lighter;
 	border-radius: 5px;
 	padding: 20px;
-	text-align: center;
+	margin-top: 50px;
 }
+
+
+	

@@ -2,22 +2,33 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$text-dark: #04012E;
+$text-light: #CFCFD1;
+$darkest: #08053F;
+$darker: #18145B;
+$root: #363377;
+$lighter: #5F5C92;
+$lightest: #9391AE;
+$highlight: #BABAC3;
+
+.index {
+	text-align: center;
+}
 
 .profiles-index {
 	list-style-type: none;
 	display: inline-block;
-	padding: 20px;
 }
 
 .profiles-index-header {
-	color: #FAE1D9;
+	color: $text-light
 }
 
 .profiles-index-item {
 	display: block;
 	float: left;
-	background-color: #801515;
-	color: #FAE1D9;
+	background-color: $root;
+	color: $text-light;
 	border-radius: 5px;
 	width: 30%;
 	height: 305px;
@@ -28,9 +39,9 @@
 }
 
 .profiles-index-item:hover {
-	background-color: #FFAAAA;
+	background-color: $highlight;
 	cursor: pointer;
-	color: black;
+	color: $text-dark;
 }
 
 .index-item-photo {
@@ -85,10 +96,10 @@
 	height: 400px;
 	left: -200px;
 	top: 100px;
-	background-color: #550000;
+	background-color: $darkest;
 	border-bottom-left-radius: 5px;
 	border-top-left-radius: 5px;
-	color: #FAE1D9;
+	color: $text-light;
 }
 
 .search {
@@ -96,11 +107,11 @@
 }
 
 .about-me {
-	color: black;
+	color: $text-dark;
 }
 
 .looking-for {
-	color: black;
+	color: $text-dark;
 }
 
 .edit, .save {
