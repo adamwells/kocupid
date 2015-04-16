@@ -7,6 +7,7 @@ Kocupid.Views.ProfilesIndex = Backbone.CompositeView.extend({
 	initialize: function () {
 		this.shownItems = new Kocupid.Collections.Profiles();
 		this.allItems = new Kocupid.Collections.Profiles();
+		this.loader = 'spinner'
 		this.page = 0;
 		this.load();
 
@@ -46,30 +47,34 @@ Kocupid.Views.ProfilesIndex = Backbone.CompositeView.extend({
 		}.bind(this));
 	},
 
-	addSpinner: function () {
-		this.button = this.$('.load');
-		this.$('.load').html('<div class="spinner"><div class="loader"></div></div>')
-	},
-
-	removeSpinner: function () {
-		this.$('.load').html(this.button.html());
+	addLoader: function () {
+		if (this.loader === 'spinner') {
+			this.$('.load').html('<div class="spinner"><div class="loader"></div></div>');
+		} else {
+			this.$('.load').html('<div class="btn btn-large btn-primary">Load More Users</div>');
+		}	
 	},
 
 	load: function () {
-		this.addSpinner();
+		this.$('.load').html('<div class="spinner"><div class="loader"></div></div>');
 		this.collection.fetch({ data: { page_number: this.page },
 			success: function () {
 				this.allItems.add(this.collection.models);
 				this.subviews('.search-bar')[0].search();
-				this.removeSpinner();
+				this.loader = 'button';
+				if (this.collection.size() < 30) {
+					this.$('.load').html('');
+				}
 			}.bind(this)
 		});
 		this.page += 1;
+
 	},
 
 	render: function () {
 		var content = this.template({ profiles: this.shownItems });
 		this.$el.html(content);
+		this.addLoader();
 		this.attachSubviews();
 		return this;
 	}
