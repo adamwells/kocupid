@@ -72,6 +72,7 @@ Add a Backbone form at the top of the matches page to add search criteria.  Upda
 - [x] Auto-fill when sending messages
 - [ ] Show match percentage
 - [x] Loading spinner (when loading more users)
+- [ ] Order by in matches page
 
 [phase-one]: ./docs/phases/phase1.md
 [phase-two]: ./docs/phases/phase2.md

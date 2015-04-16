@@ -1,73 +1,100 @@
-<h3>Find me:</h3>
 
+<h4>Show me:</h4>
 <form class="search-form">
-	<select name="style" class="form-control form-group">
-		<option value="" disabled selected>Style</option>
-		<option value="Boxer">Boxer</option>
-		<option value="Wrestler">Wrestler</option>
-		<option value="MMA Fighter">MMA Fighter</option>
-		<option value="Other">Other</option>
-		<option value="">Any</option>
-	</select>
-
-	<select name="gender" class="form-control form-group">
-		<option value="" disabled selected>Gender</option>
-		<option value="Male">Men</option>
-		<option value="Female">Women</option>
-		<option value="Other">Other</option>
-		<option value="">Any</option>
-	</select>
-
-	<select name="weight_class" class="form-control form-group">
-		<option value="" disabled selected>Weight Class</option>
-		<option value="Featherweight">Featherweight</option>
-		<option value="Lightweight">Lightweight</option>
-		<option value="Middleweight">Middleweight</option>
-		<option value="Heavyweight">Heavyweight</option>
-		<option value="">Any</option>
-	</select>
-
-	<select name="body_type" class="form-control form-group">
-		<option value="" disabled selected>Body Type</option>
-		<option value="Tank">Tank</option>
-		<option value="Flimsy">Flimsy</option>
-		<option value="Built">Built</option>
-		<option value="Stacked">Stacked</option>
-		<option value="Jacked">Jacked</option>
-		<option value="Yoked">Yoked</option>
-		<option value="">Any</option>
-	</select>
-	
 	<div class="row">
-		<div class="col-xs-5">
-			<select name="age_start" class="form-control form-group">
-				<option value="18" selected>18</option>
-				<% for (var i = 19; i < 100; i++) { %>
-					<option value="<%= i %>"><%= i %></option>
-				<% } %>
+		<div class="col-md-4">
+			<select name="style" class="form-control form-group input-sm">
+				<option value="" disabled selected>Style</option>
+				<option value="Boxer">Boxer</option>
+				<option value="Wrestler">Wrestler</option>
+				<option value="MMA Fighter">MMA Fighter</option>
+				<option value="Other">Other</option>
+				<option value="">Any</option>
 			</select>
 		</div>
-	 	<div class="col-xs-5">
-			<select name="age_end" class="form-control form-group">
-				<% for (var i = 18; i < 99; i++) { %>
-					<option value="<%= i %>"><%= i %></option>
-				<% } %>
-				<option value="100" selected>100</option>
+	
+		<div class="col-md-4">
+			<select name="gender" class="form-control form-group input-sm">
+				<option value="" disabled selected>Gender</option>
+				<option value="Male">Men</option>
+				<option value="Female">Women</option>
+				<option value="Other">Other</option>
+				<option value="">Any</option>
+			</select>
+		</div>
+
+		<div class="col-md-4">
+			<select name="weight_class" class="form-control form-group input-sm">
+				<option value="" disabled selected>Weight Class</option>
+				<option value="Featherweight">Featherweight</option>
+				<option value="Lightweight">Lightweight</option>
+				<option value="Middleweight">Middleweight</option>
+				<option value="Heavyweight">Heavyweight</option>
+				<option value="">Any</option>
 			</select>
 		</div>
 	</div>
 
-	<select name="bookmarked" class="form-control form-group">
-		<option value="" selected>Anyone</option>
-		<option value="true">Bookmarked Only</option>
-	</select>
+	<div class="row">
+		<div class="col-md-4">
+			<select name="body_type" class="form-control form-group input-sm">
+				<option value="" disabled selected>Body Type</option>
+				<option value="Tank">Tank</option>
+				<option value="Flimsy">Flimsy</option>
+				<option value="Built">Built</option>
+				<option value="Stacked">Stacked</option>
+				<option value="Jacked">Jacked</option>
+				<option value="Yoked">Yoked</option>
+				<option value="">Any</option>
+			</select>
+		</div>
+		
+		<div class="col-md-4">
+			<div class="row">
+				<div class="col-xs-2">
+				<h4>Ages:</h4>
+				</div>
+
+				<div class="col-xs-4">
+					<select name="age_start" class="form-control form-group input-sm">
+						<option value="18" selected>18</option>
+						<% for (var i = 19; i < 100; i++) { %>
+							<option value="<%= i %>"><%= i %></option>
+						<% } %>
+					</select>
+				</div>
+
+				<div class="col-xs-1">
+				<h4>-</h4>
+				</div>
+
+			 	<div class="col-xs-4">
+					<select name="age_end" class="form-control form-group input-sm">
+						<% for (var i = 18; i < 99; i++) { %>
+							<option value="<%= i %>"><%= i %></option>
+						<% } %>
+						<option value="100" selected>100</option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-4">
+			<select name="bookmarked" class="form-control form-group input-sm">
+				<option value="" selected>Anyone</option>
+				<option value="true">Bookmarked Only</option>
+			</select>
+		</div>
+	</div>
 	
-	<div class="input-group">
-		<input type="text" class="form-control username-input" name="username" placeholder="Username">
-		<span class="input-group-btn">
-			<button class="search btn btn-default" type="button">GO</button>
-		</span>
-	</div>	
+	<div class="row">
+		<div class="input-group col-md-5 username-input">
+			<input type="text" class="form-control input-sm" name="username" placeholder="Username">
+			<span class="input-group-btn">
+				<button class="search btn btn-default btn-sm" type="button">GO</button>
+			</span>
+		</div>
+	</div>
 </form>
 
 <script>

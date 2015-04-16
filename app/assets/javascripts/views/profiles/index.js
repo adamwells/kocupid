@@ -7,7 +7,7 @@ Kocupid.Views.ProfilesIndex = Backbone.CompositeView.extend({
 	initialize: function () {
 		this.shownItems = new Kocupid.Collections.Profiles();
 		this.allItems = new Kocupid.Collections.Profiles();
-		this.loader = 'spinner'
+		this.loader = 'spinner';
 		this.page = 0;
 		this.load();
 
@@ -70,7 +70,6 @@ Kocupid.Views.ProfilesIndex = Backbone.CompositeView.extend({
 			}.bind(this)
 		});
 		this.page += 1;
-
 	},
 
 	render: function () {
