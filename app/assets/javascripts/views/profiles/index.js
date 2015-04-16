@@ -46,11 +46,22 @@ Kocupid.Views.ProfilesIndex = Backbone.CompositeView.extend({
 		}.bind(this));
 	},
 
+	addSpinner: function () {
+		this.button = this.$('.load');
+		this.$('.load').html('<div class="spinner"><div class="loader"></div></div>')
+	},
+
+	removeSpinner: function () {
+		this.$('.load').html(this.button.html());
+	},
+
 	load: function () {
+		this.addSpinner();
 		this.collection.fetch({ data: { page_number: this.page },
 			success: function () {
 				this.allItems.add(this.collection.models);
 				this.subviews('.search-bar')[0].search();
+				this.removeSpinner();
 			}.bind(this)
 		});
 		this.page += 1;
