@@ -50,9 +50,11 @@ Kocupid.Views.ProfilesIndex = Backbone.CompositeView.extend({
 	addLoader: function () {
 		if (this.loader === 'spinner') {
 			this.$('.load').html('<div class="spinner"><div class="loader"></div></div>');
-		} else {
+		} else if (this.loader === 'button') {
 			this.$('.load').html('<div class="btn btn-large btn-primary">Load More Users</div>');
-		}	
+		}	else {
+			this.$('.load').html('');
+		}
 	},
 
 	load: function () {
@@ -63,7 +65,7 @@ Kocupid.Views.ProfilesIndex = Backbone.CompositeView.extend({
 				this.subviews('.search-bar')[0].search();
 				this.loader = 'button';
 				if (this.collection.size() < 30) {
-					this.$('.load').html('');
+					this.loader = 'nothing'
 				}
 			}.bind(this)
 		});
