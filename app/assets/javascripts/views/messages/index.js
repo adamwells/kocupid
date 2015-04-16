@@ -10,15 +10,13 @@ Kocupid.Views.MessagesIndex = Backbone.CompositeView.extend({
 	initialize: function () {
 		this.listenTo(this.collection, 'sync add', this.render);
 		this.received();
-
 		this.collection.fetch();
-
-		this.addNavbar();
+		this.addSidebar();
 	},
 
-	addNavbar: function () {
-		var navbar = new Kocupid.Views.Navbar();
-		this.addSubview('.navbar', navbar);
+	addSidebar: function () {
+		var sidebar = new Kocupid.Views.Sidebar();
+		this.addSubview('.sidebar', sidebar);
 	},
 
 	sent: function () {

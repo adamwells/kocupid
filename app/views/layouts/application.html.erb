@@ -41,6 +41,8 @@
 </head>
 <body>
 
+
+
 <% if flash.now[:errors] %>
   <% flash.now[:errors].each do |error| %>
     <div class="alert alert-danger" role="alert">
@@ -51,8 +53,7 @@
   <% end %>
 <% end %>
 
-
-<%= yield %>
+  <%= yield %>
 
 </body>
 </html>

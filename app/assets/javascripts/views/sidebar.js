@@ -1,12 +1,14 @@
 Kocupid.Views.Sidebar = Backbone.View.extend({
-	template: JST['_navbar'],
+	template: JST['_sidebar'],
 	events: {
 		'click .logout' : 'logout'
 	},
 
 	logout: function () {
-		var session = new Kocupid.Models.Session({ id: Kocupid.currentUserId });
-		session.destroy();
+		$.ajax({
+			url: '/session/0',
+			type: 'DELETE'
+		})
 	},
 
 	render: function () {

@@ -1,0 +1,52 @@
+<style>
+	body {
+    background-image: url('http://i.imgur.com/WawafgZ.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+	}
+</style>
+
+<div class="login-page">
+	<div class="login-form input-group">
+		<h1>Log In</h1>
+		<form>
+			<input type="text" 
+						 name="login" 
+						 placeholder="Email" 
+						 class="email form-control login-input">
+			<br>
+
+			<input type="password" 
+						 name="password" 
+						 placeholder="Password" 
+						 class="password form-control login-input">
+			<br>
+
+			<input type="submit" value="Let's Go" class="login btn btn-large btn-primary">
+			<input type="submit" value="Register" class="login btn btn-large btn-primary">
+
+		</form>
+
+	<button class="demo btn btn-large btn-primary" onclick="demo()">Demo Login</button>
+	</div>
+</div>
+
+<script>
+	var demo = function methodName () {
+		$(function(){
+      $(".email").typed({
+          strings: ["rhonda.rousey@strikeforce.net"],
+          typeSpeed: 50,
+          callback: function () {
+          	$(".password").typed({
+		          strings: ["rhondapassword"],
+		          typeSpeed: 50,
+		          callback: function () {
+		          	$(".login").click()
+          		}
+      			});
+          }
+      });
+  });
+	}
+</script>
