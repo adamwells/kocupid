@@ -27,6 +27,6 @@ class ApplicationController < ActionController::Base
   end
 
   def ensure_logged_in
-  	redirect_to new_session_url unless logged_in?
+  	render json: { error: "Must be logged in to do that!" } unless logged_in?
   end
 end

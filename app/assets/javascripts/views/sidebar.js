@@ -1,7 +1,22 @@
 Kocupid.Views.Sidebar = Backbone.View.extend({
 	template: JST['_sidebar'],
 	events: {
+		'click .matches' : 'matches',
+		'click .messages' : 'messages',
+		'click .profile' : 'profile',
 		'click .logout' : 'logout'
+	},
+
+	matches: function () {
+		window.router.navigate('profiles', { trigger: true });
+	},
+
+	messages: function () {
+		window.router.navigate('messages', { trigger: true });
+	},
+
+	profile: function () {
+		window.router.navigate('profiles/' + Kocupid.currentUserId, { trigger: true });
 	},
 
 	logout: function () {

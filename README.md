@@ -74,6 +74,7 @@ Add a Backbone form at the top of the matches page to add search criteria.  Upda
 - [ ] Show match percentage
 - [x] Loading spinner (when loading more users)
 - [ ] Order by in matches page
+- [ ] Flash notices on frontend
 
 [phase-one]: ./docs/phases/phase1.md
 [phase-two]: ./docs/phases/phase2.md

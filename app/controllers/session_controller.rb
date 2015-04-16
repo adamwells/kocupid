@@ -11,8 +11,7 @@ class SessionController < ApplicationController
 			log_in!(@user)
 			render json: { user_id: @user.id }
 		else
-			flash.now[:errors] = ["That login information couldn't be found!"]
-			render :new
+			render json: { error: "That login information couldn't be found!"}
 		end
 	end
 
