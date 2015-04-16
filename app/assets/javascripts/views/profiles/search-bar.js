@@ -9,11 +9,19 @@ Kocupid.Views.SearchBar = Backbone.View.extend({
 
 	initialize: function (options) {
 		this.fullCollection = options.fullCollection;
-		this.usernames = this.fullCollection.usernames();
 		this.listenTo(this.fullCollection, 'sync', this.render);
+
+		var c = new Kocupid.Collections.Profiles();
+		c.fetch({
+			success: function () {
+				this.usernames = JSON.stringify(c.usernames());
+			}.bind(this)
+		})
+
+		this.listenTo(c, 'sync', this.render);
 	},
 
-	search: function (event) {
+	search: function (event, items) {
 		this.collection.set(this.fullCollection.models);
 		var ageFilter = false;
 
@@ -49,8 +57,11 @@ Kocupid.Views.SearchBar = Backbone.View.extend({
 	},
 
 	render: function () {
-		var usernames = JSON.stringify(this.fullCollection.usernames());
-		var content = this.template({ usernames: usernames });
+		if (this.usernames) {
+			var content = this.template({ usernames: this.usernames });	
+		} else {
+			var content = this.template({ usernames: "[]" });
+		}	
 		this.$el.html(content);
 		return this;
 	}
