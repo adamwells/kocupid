@@ -1,7 +1,8 @@
 Kocupid.Views.LoginForm = Backbone.View.extend({
 	template: JST['session/login_form'],
 	events: {
-		'submit form' : 'login'
+		'submit form' : 'login',
+		'click .register' : 'register'
 	},
 
 	login: function (event) {
@@ -16,6 +17,10 @@ Kocupid.Views.LoginForm = Backbone.View.extend({
 				window.router.navigate('profiles', { trigger: true });
 			}
 		})
+	},
+
+	register: function () {
+		window.router.navigate('register', { trigger: true })
 	},
 
 	render: function () {

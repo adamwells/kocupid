@@ -9,6 +9,7 @@ Kocupid.Views.Sidebar = Backbone.View.extend({
 			url: '/session/0',
 			type: 'DELETE',
 			success: function () {
+				Kocupid.currentUserId = null;
 				window.router.navigate('', { trigger: true });
 			},
 

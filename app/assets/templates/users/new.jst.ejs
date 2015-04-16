@@ -1,0 +1,46 @@
+<style>
+	body {
+    background-image: url('http://i.imgur.com/WawafgZ.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+	}
+</style>
+
+<div class="signup-page">
+	<div class="signup-form input-group">
+		<h1>Create an Account</h1>
+		
+		<form>
+			<input type="hidden" 
+						 name="authenticity_token"
+						 value="<%= Kocupid.authenticityToken %>">
+
+			<input type="text" 
+						 name="email" 
+						 class="signup-input form-control"
+						 placeholder="Email">
+
+			<input type="text" 
+						 name="username" 
+						 class="form-control signup-input"
+						 placeholder="Username">
+
+			<input type="password" 
+						 name="password" 
+						 class="form-control signup-input"
+						 placeholder="Password">
+
+			<input type="submit" 
+						 value="Create My Account" 
+						 class="btn btn-large btn-primary signup-input">
+		</form>
+	
+		<div class="sign-in-button">
+			Already have an account?  
+			<div class="login btn btn-large btn-success">Sign in!</div>
+		</div>
+	</div>
+	
+
+	
+</div>
