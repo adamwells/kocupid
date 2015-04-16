@@ -9,7 +9,7 @@ class SessionController < ApplicationController
 
 		if @user
 			log_in!(@user)
-			redirect_to '/app'
+			render json: { user_id: @user.id }
 		else
 			flash.now[:errors] = ["That login information couldn't be found!"]
 			render :new
@@ -18,12 +18,12 @@ class SessionController < ApplicationController
 
 	def destroy
 		log_out!
-		redirect_to new_session_url
+		render json: { login: 'success'}
 	end
 
   private
 
   def user_credentials
-  	params.require(:user).permit(:login, :password)
+  	params.require(:session).permit(:login, :password)
   end
 end

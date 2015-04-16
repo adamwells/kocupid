@@ -1,6 +1,6 @@
 Kocupid.Routers.Router = Backbone.Router.extend({
 	routes: {
-		'' : 'profilesIndex',
+		'' : 'loginForm',
 		'profiles' : 'profilesIndex',
 		'profiles/:id/edit' : 'editProfile',
 		'profiles/:id' : 'profileShow',
@@ -34,12 +34,6 @@ Kocupid.Routers.Router = Backbone.Router.extend({
 	messagesIndex: function () {
 		var messagesIndex = new Kocupid.Views.MessagesIndex({ collection: this.messages });
 		this._swapView(messagesIndex);
-	},
-
-	messageShow: function (id) {
-		var message = this.messages.getOrFetch(id);
-		var messageShow = new Kocupid.Views.MessageShow({ model: message });
-		this._swapView(messageShow);
 	},
 
 	loginForm: function () {

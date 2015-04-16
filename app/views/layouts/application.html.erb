@@ -21,6 +21,7 @@
 
   <script>
     filepicker.setKey("<%= ENV['FILEPICKER_API_KEY'] %>");
+    Kocupid.authenticityToken = "<%= form_authenticity_token %>";
   </script>
 
   <style>

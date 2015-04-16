@@ -7,7 +7,14 @@ Kocupid.Views.Sidebar = Backbone.View.extend({
 	logout: function () {
 		$.ajax({
 			url: '/session/0',
-			type: 'DELETE'
+			type: 'DELETE',
+			success: function () {
+				window.router.navigate('', { trigger: true });
+			},
+
+			error: function () {
+				console.log('it was an error!')
+			}
 		})
 	},
 

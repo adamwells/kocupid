@@ -10,6 +10,10 @@
 	<div class="login-form input-group">
 		<h1>Log In</h1>
 		<form>
+			<input type="hidden" 
+						 name="authenticity_token" 
+						 value="<%= Kocupid.authenticityToken %>">
+
 			<input type="text" 
 						 name="login" 
 						 placeholder="Email" 
@@ -23,7 +27,7 @@
 			<br>
 
 			<input type="submit" value="Let's Go" class="login btn btn-large btn-primary">
-			<input type="submit" value="Register" class="login btn btn-large btn-primary">
+			<button class="register btn btn-large btn-primary">Register</button>
 
 		</form>
 

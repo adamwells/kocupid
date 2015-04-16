@@ -6,7 +6,16 @@ Kocupid.Views.LoginForm = Backbone.View.extend({
 
 	login: function (event) {
 		event.preventDefault();
-		console.log('success')
+		var data = this.$('form').serializeJSON();
+		$.ajax({
+			type: 'POST',
+			url: '/session',
+			data: { session: data },
+			success: function (response) {
+				Kocupid.currentUserId = response['user_id'];
+				window.router.navigate('profiles', { trigger: true });
+			}
+		})
 	},
 
 	render: function () {

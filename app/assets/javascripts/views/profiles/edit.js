@@ -9,12 +9,12 @@ Kocupid.Views.EditProfile = Backbone.CompositeView.extend ({
 	initialize: function () {
 		this.listenTo(this.model, 'sync', this.render);
 
-		this.addNavbar();
+		this.addSidebar();
 	},
 
-	addNavbar: function () {
-		var navbar = new Kocupid.Views.Navbar();
-		this.addSubview('.navbar', navbar);
+	addSidebar: function () {
+		var sidebar = new Kocupid.Views.Sidebar();
+		this.addSubview('.sidebar', sidebar);
 		console.log('this')
 	},
 
