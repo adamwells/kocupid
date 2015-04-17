@@ -5,7 +5,7 @@ Kocupid.Views.ProfilesIndexItem = Backbone.CompositeView.extend({
 
 	events: {
 		'click' : 'visitProfile',
-		'click .like-toggle-button' : 'likeToggle'
+		'click .like-toggle-button' : 'likeToggle',
 	},
 
 	initialize: function () {
@@ -18,6 +18,7 @@ Kocupid.Views.ProfilesIndexItem = Backbone.CompositeView.extend({
 	},
 
 	addLikeButton: function () {
+		this.button = true;
 		var likeButton = new Kocupid.Views.LikeButton({ model: this.model });
 		this.addSubview('.like-toggle-button', likeButton);
 	},

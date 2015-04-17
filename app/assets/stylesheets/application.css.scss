@@ -41,3 +41,11 @@ body {
 	margin: 0 auto;
 	height: 20px;
 }
+
+.error {
+	display: block;
+	border: 1px solid red;
+	padding: 5px;
+	border-radius: 4px;
+	background-color: rgba(255, 0, 0, .5);
+}

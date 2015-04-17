@@ -24,6 +24,46 @@ BODY_TYPES = ['Tank', 'Flimsy', 'Built', 'Stacked', 'Jacked', 'Yoked']
 GENDERS = ['Male', 'Female', 'Other']
 
 User.create!(email: 'rhonda.rousey@strikeforce.net', username: 'rhonda.rousey', password: 'rhondapassword')
+User.create!(email: 'sample@example.com', username: 'brock_lesnar', password: 'password');
+User.create!(email: 'sample@example.com', username: 'bibiano_fernandes', password: 'password');
+User.create!(email: 'sample@example.com', username: 'cain.velasquez', password: 'password');
+User.create!(email: 'sample@example.com', username: 'jake.shields', password: 'password');
+User.create!(email: 'sample@example.com', username: 'shinya', password: 'password');
+User.create!(email: 'sample@example.com', username: 'bibiano_fernandes', password: 'password');
+# Tanakori Gomi
+User.create!(email: 'sample@example.com', username: 't.gomi', password: 'password');
+# Rich Franklin
+User.create!(email: 'sample@example.com', username: 'rich.f', password: 'password');
+User.create!(email: 'sample@example.com', username: 'frankMir', password: 'password');
+# Frankie Edgar
+User.create!(email: 'sample@example.com', username: 'frankie', password: 'password');
+# Josh Barnett
+User.create!(email: 'sample@example.com', username: 'j_barnett', password: 'password');
+# Chuck Lidell
+User.create!(email: 'sample@example.com', username: 'chucky', password: 'password');
+# Rampage Jackson
+User.create!(email: 'sample@example.com', username: 'RAMPAGE', password: 'password');
+# Junior Dos Santos
+User.create!(email: 'sample@example.com', username: 'jr_ds', password: 'password');
+# Mirko Cro Cop
+User.create!(email: 'sample@example.com', username: 'cro.cop', password: 'password');
+# Lyoto Machida
+User.create!(email: 'sample@example.com', username: 'lyoto_m', password: 'password');
+# Urijah Faber
+User.create!(email: 'sample@example.com', username: 'urijah', password: 'password');
+# Wanderlei Silva
+User.create!(email: 'sample@example.com', username: 'w_silva', password: 'password');
+# Shogun Rua
+User.create!(email: 'sample@example.com', username: 'the_shogun', password: 'password');
+# Matt Hughes
+User.create!(email: 'sample@example.com', username: 'matty_h', password: 'password');
+# Jon Fitch
+User.create!(email: 'sample@example.com', username: 'j.fitch', password: 'password');
+# Rashad Evans
+User.create!(email: 'sample@example.com', username: 'rashad', password: 'password');
+# Jon Jones
+User.create!(email: 'sample@example.com', username: 'jj', password: 'password');
+
 
 100.times do
 	User.create!(email: Faker::Internet.email,

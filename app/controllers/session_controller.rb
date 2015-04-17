@@ -11,7 +11,7 @@ class SessionController < ApplicationController
 			log_in!(@user)
 			render json: { user_id: @user.id, profile_id: @user.profile.id }
 		else
-			render json: { error: "That login information couldn't be found!"}
+			render json: { message: "That login information couldn't be found!"}, status: 401
 		end
 	end
 

@@ -15,7 +15,6 @@ Kocupid.Views.EditProfile = Backbone.CompositeView.extend ({
 	addSidebar: function () {
 		var sidebar = new Kocupid.Views.Sidebar();
 		this.addSubview('.sidebar', sidebar);
-		console.log('this')
 	},
 
 	submitForm: function (event) {

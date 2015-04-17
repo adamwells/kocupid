@@ -13,11 +13,20 @@ Kocupid.Views.RegisterForm = Backbone.View.extend({
 		event.preventDefault();
 		var data = this.$('form').serializeJSON();
 		var user = new Kocupid.Models.User();
-		console.log(data);
-		user.save(data, {
+
+		$.ajax({
+			type: 'POST',
+			url: '/users',
+			data: data,
 			success: function (response) {
 				window.router.navigate('', { trigger: true })
-			}
+			},
+
+			error: function (response) {
+				Kocupid.flash = response.responseJSON['messages'];
+				this.render();
+			}.bind(this)
+
 		})
 	},
 

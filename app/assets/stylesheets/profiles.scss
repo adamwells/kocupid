@@ -118,6 +118,10 @@ $highlight: #BABAC3;
 	width: 100%;
 }
 
+.profile-list {
+	list-style-type: none;
+}
+
 .features {
 	float: right;
 	width: 100%;
@@ -183,9 +187,9 @@ $highlight: #BABAC3;
 	position: absolute;
 	text-align: left;
 	padding: 0px;
-	width: 200px;
+	width: 180px;
 	height: 250px;
-	left: -200px;
+	left: -180px;
 	top: 100px;
 	background-color: $darkest;
 	border-bottom-left-radius: 5px;

@@ -6,11 +6,18 @@
 	position: relative;
 	width: 400px;
 	height: 470px;
-	background: rgba(130,130,130,.7);
+	background: rgba(180,180,190,.8);
 	border-radius: 4px;
 	padding: 20px 10px;
 	margin: 25px auto;
 	text-align: center;
+
+	box-shadow: 4px 4px 5px rgba(30,30,30,.5);
+
+	.errors {
+		color: white;
+		margin: 10px;
+	}
 }
 
 .signup-input {
@@ -23,3 +30,4 @@
 	right: 0;
 	padding: 8px;
 }
+

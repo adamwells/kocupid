@@ -30,7 +30,15 @@
 			<div class="register btn btn-large btn-primary">Register</div>
 		</form>
 
-	<button class="demo btn btn-large btn-primary" onclick="demo()">Demo Login</button>
+		<button class="demo btn btn-large btn-primary" onclick="demo()">Demo Login</button>
+		
+		<div class="errors">
+			<% if (Kocupid.flash) { %>
+				<div class="error">
+					<%= Kocupid.flash %><% Kocupid.flash = null %>
+				</div>
+			<% } %>
+		</div>
 	</div>
 </div>
 

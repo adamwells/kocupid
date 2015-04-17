@@ -35,6 +35,18 @@
 						 class="btn btn-large btn-primary signup-input">
 		</form>
 	
+
+		<div class="errors">
+			<% if (Kocupid.flash) { %>
+				<% Kocupid.flash.forEach(function(error) { %>
+					<div class="error">
+						<%= error %>
+					</div>
+				<% }) %>
+			<% } %>
+			<% Kocupid.flash = null %>
+		</div>
+
 		<div class="sign-in-button">
 			Already have an account?  
 			<div class="login btn btn-large btn-success">Sign in!</div>

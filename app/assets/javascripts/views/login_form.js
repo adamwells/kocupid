@@ -1,4 +1,4 @@
-Kocupid.Views.LoginForm = Backbone.View.extend({
+Kocupid.Views.LoginForm = Backbone.CompositeView.extend({
 	template: JST['session/login_form'],
 	events: {
 		'submit form' : 'login',
@@ -17,6 +17,11 @@ Kocupid.Views.LoginForm = Backbone.View.extend({
 				Kocupid.currentProfileId = response['profile_id']
 				window.router.navigate('profiles', { trigger: true });
 			},
+
+			error: function (response) {
+				Kocupid.flash = response.responseJSON['message'];
+				this.render();
+			}.bind(this)
 		})
 	},
 
