@@ -225,6 +225,8 @@ $side-bar: rgb(20,45,105);
 }
 
 .sidebar-item-name {
+	position: relative;
+	top: -7px;
 	float: left;
 }
 

@@ -4,12 +4,13 @@
 
 $text-dark: #04012E;
 $text-light: #CFCFD1;
-$darkest: #08053F;
+$darkest: rgb(24,46,107);
 $darker: #18145B;
-$root: #363377;
+$root: rgb(36,65,148);
 $lighter: #5F5C92;
 $lightest: #9391AE;
 $highlight: #BABAC3;
+$side-bar: rgb(20,45,105);
 
 .inbox {
 	color: $text-dark;
@@ -21,7 +22,7 @@ $highlight: #BABAC3;
 
 .selected {
 	font-weight: bold;
-	color: $text-light;
+	color: $root;
 }
 
 .view-option {
