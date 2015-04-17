@@ -22,6 +22,7 @@
   <script>
     filepicker.setKey("<%= ENV['FILEPICKER_API_KEY'] %>");
     Kocupid.authenticityToken = "<%= form_authenticity_token %>";
+    Kocupid.logoPath = "<%= image_path 'logo.png' %>";
   </script>
 
   <style>
@@ -42,8 +43,6 @@
 </head>
 <body>
 
-
-
   <% if flash.now[:errors] %>
     <% flash.now[:errors].each do |error| %>
       <div class="alert alert-danger" role="alert">
@@ -53,6 +52,7 @@
       </div>
     <% end %>
   <% end %>
+
   
   <div class="row">
     <%= yield %>
