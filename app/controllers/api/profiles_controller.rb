@@ -10,9 +10,6 @@ module Api
 				@profiles = @profiles[((page_num * page_size))..(page_num * page_size + page_size - 1)]
 			end
 
-			puts "PROFILES PARAMS"
-			puts params
-
 			@bookmarks = current_user.bookmarks
 			@likes = current_user.given_likes
 

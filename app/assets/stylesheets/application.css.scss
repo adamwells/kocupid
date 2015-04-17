@@ -17,23 +17,35 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-$text-dark: #04012E;
+/*$text-dark: #04012E;
 $text-light: #CFCFD1;
 $darkest: #08053F;
 $darker: #18145B;
 $root: #363377;
 $lighter: #5F5C92;
 $lightest: #9391AE;
+$highlight: #BABAC3;*/
+
+$text-dark: #04012E;
+$text-light: #CFCFD1;
+$darkest: rgb(24,46,107);
+$darker: #18145B;
+$root: rgb(40,85,162);
+$lighter: #5F5C92;
+$lightest: #9391AE;
 $highlight: #BABAC3;
+$page-content: rgb(243,245,249);
+$side-bar: rgb(24,46,107);
+
 
 
 body {
-	background-color: $lightest;
+	background-color: $root;
 	overflow: scroll;
 }
 
 .page-content {
-	background-color: $lighter;
+	background-color: $page-content;
 	padding: 15px;
 }
 

@@ -35,6 +35,18 @@ Kocupid.Views.EditProfile = Backbone.CompositeView.extend ({
 			}			
 		}
 
+		if (data['height_feet'] > 8) {
+			data['height_feet'] = 8;
+		} else if (data['height_feet'] < 3) {
+			data['height_feet'] = 3;
+		}
+
+		if (data['height_inches'] > 11) {
+			data['height_inches'] = 11;
+		} else if (data['height_inches'] < 0) {
+			data['height_inches'] = 0;
+		}
+
 		this.model.save(data, {
 			success: function () {
 				window.router.navigate('profiles/' + this.model.get('id'), { trigger: true })

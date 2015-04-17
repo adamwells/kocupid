@@ -27,10 +27,6 @@ Kocupid.Views.Sidebar = Backbone.View.extend({
 				Kocupid.currentUserId = null;
 				window.router.navigate('', { trigger: true });
 			},
-
-			error: function () {
-				console.log('it was an error!')
-			}
 		})
 	},
 
