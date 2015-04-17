@@ -1,4 +1,5 @@
 <img class="index-item-photo" src="<%= profile.escape('photo_url')%>">
 <h4 class="username"><%= profile.escape('username') %></h4>
-<h5><%= profile.escape('style') %> - <%= profile.escape('weight_class') %></h5>
-<h6><%= profile.escape('age') %> | <%= profile.escape('body_type') %></h6>
+<h5 class="style-weight-class"><%= profile.escape('style') %> - <%= profile.escape('weight_class') %></h5>
+<h6 class="age-body-type"><%= profile.escape('age') %> | <%= profile.escape('body_type') %></h6>
+<div class="like-toggle-button"></div>

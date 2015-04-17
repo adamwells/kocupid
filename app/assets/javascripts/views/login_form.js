@@ -14,6 +14,7 @@ Kocupid.Views.LoginForm = Backbone.View.extend({
 			data: { session: data },
 			success: function (response) {
 				Kocupid.currentUserId = response['user_id'];
+				Kocupid.currentProfileId = response['profile_id']
 				window.router.navigate('profiles', { trigger: true });
 			},
 		})

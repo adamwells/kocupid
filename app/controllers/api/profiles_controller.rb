@@ -14,6 +14,7 @@ module Api
 			puts params
 
 			@bookmarks = current_user.bookmarks
+			@likes = current_user.given_likes
 
 			render :index
 		end

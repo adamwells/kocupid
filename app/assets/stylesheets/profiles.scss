@@ -31,6 +31,7 @@ $highlight: #BABAC3;
 }
 
 .profiles-index-item {
+	position: relative;
 	display: block;
 	float: left;
 	background-color: $root;
@@ -42,12 +43,46 @@ $highlight: #BABAC3;
 	text-align: center;
 	transition: background-color 100ms;
 	transition: color 50ms;
+	overflow: hidden;
+
+	.like-toggle-button {
+		display: block;
+		width: 60%;
+		margin: 0 auto;
+		position: relative;
+		left: 200px;
+		top: -40px;
+
+	  transition: left .5s;
+	  -moz-transition: left .5s;
+		-webkit-transition: left .5s;
+	  -o-transition: left .5s;
+	}
+
+	.style-weight-class, .age-body-type {
+		position: relative;
+		left: 0px;
+
+	  transition: left .5s;
+	  -moz-transition: left .5s;
+		-webkit-transition: left .5s;
+	  -o-transition: left .5s;
+	}
 }
 
 .profiles-index-item:hover {
 	background-color: $highlight;
 	cursor: pointer;
 	color: $text-dark;
+
+	.style-weight-class, .age-body-type {
+		left: -300px;
+	}
+
+	.like-toggle-button {
+		display: block;
+		left: 0px;
+	}
 }
 
 .index-item-photo {
@@ -180,6 +215,10 @@ $highlight: #BABAC3;
 .sidebar-item:hover {
 	background-color: $root;
 	cursor: pointer;
+}
+
+.top {
+	border-top-left-radius: 5px;
 }
 
 .loader,

@@ -51,6 +51,7 @@ class Profile < ActiveRecord::Base
 	end
 
 	def age
-		return ((Time.now.to_date - self.birth_date)/365.25).to_i
+		return ((Time.now.to_date - self.birth_date)/365.25).to_i if self.birth_date
+		return nil
 	end
 end

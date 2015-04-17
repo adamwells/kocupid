@@ -9,10 +9,10 @@ class UsersController < ApplicationController
 		if @user.save
 			log_in!(@user)
 			Profile.create!(user_id: @user.id);
-			redirect_to root_url
+			render json: @user
 		else
 			flash.now[:errors] = @user.errors.full_messages
-			render :new
+			render json: {error: @user.errors.full_messages}
 		end
 
 
@@ -21,6 +21,6 @@ class UsersController < ApplicationController
 	private
 
 	def user_params
-		params.require(:user).permit(:email, :username, :password)
+		params.permit(:email, :username, :password)
 	end
 end

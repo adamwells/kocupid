@@ -9,12 +9,14 @@ Kocupid.Views.RegisterForm = Backbone.View.extend({
 		window.router.navigate('', { trigger: true });
 	},
 
-	createUser: function () {
+	createUser: function (event) {
+		event.preventDefault();
 		var data = this.$('form').serializeJSON();
 		var user = new Kocupid.Models.User();
+		console.log(data);
 		user.save(data, {
-			success: function () {
-				window.navigate('', { trigger: true })
+			success: function (response) {
+				window.router.navigate('', { trigger: true })
 			}
 		})
 	},
