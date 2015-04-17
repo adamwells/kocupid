@@ -1,38 +1,39 @@
-<div class="sidebar"></div>
-
-<div class="page-content">
-	<div class="actions">
-		<div class="save">
-			<span class="save-profile-button glyphicon glyphicon-floppy-disk"></span>
-			<h5>Save Profile</h5>
-		</div>
-	</div>
-	
-
-	<div class="header-info clearfix">
-		<img class="profile-photo" src="<%= profile.escape('photo_url') %>">
-
-		<%= JST['profiles/_basic_info_form']({ profile: profile }) %>
-	</div>
-
-	<hr class="header-divider">
-
-	<div class="about-me">
-	<h4 class="profile-header">About me</h4>
-		<%= JST['profiles/_about_me_form']({ profile: profile }) %>
-	</div>
-
-	<hr>
-	
-	<div class="row">
-		<div class="col-md-8">
-		<%= JST['profiles/_looking_for_form']({ profile: profile }) %>
-		</div>
-		
-		<div class="col-md-4">
-			<div class="features">
-				<%= JST['profiles/_features_form']({ profile: profile }) %>
+<div class="full-content">
+	<div class="page-content">
+		<div class="sidebar"></div>
+		<div class="actions">
+			<div class="save">
+				<span class="save-profile-button glyphicon glyphicon-floppy-disk"></span>
+				<h5>Save Profile</h5>
 			</div>
 		</div>
-	</div>	
+		
+
+		<div class="header-info clearfix">
+			<img class="profile-photo" src="<%= profile.escape('photo_url') %>">
+
+			<%= JST['profiles/_basic_info_form']({ profile: profile }) %>
+		</div>
+
+		<hr class="header-divider">
+
+		<div class="about-me">
+		<h4 class="profile-header">About me</h4>
+			<%= JST['profiles/_about_me_form']({ profile: profile }) %>
+		</div>
+
+		<hr>
+		
+		<div class="row">
+			<div class="col-md-8">
+			<%= JST['profiles/_looking_for_form']({ profile: profile }) %>
+			</div>
+			
+			<div class="col-md-4">
+				<div class="features">
+					<%= JST['profiles/_features_form']({ profile: profile }) %>
+				</div>
+			</div>
+		</div>	
+	</div>
 </div>
