@@ -57,6 +57,10 @@ Kocupid.Views.EditProfile = Backbone.CompositeView.extend ({
 	filepick: function () {
 		event.preventDefault();
 		filepicker.pick(
+			{
+        mimetypes: ['image/*'],
+        services: ['COMPUTER']
+      },
 		  function(Blob){
 		    this.model.set({ photo_url: Blob.url })
 		    this.render();
