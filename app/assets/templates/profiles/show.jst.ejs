@@ -1,47 +1,47 @@
 <div class="full-content">	
-	<img class="logo" src="<%= Kocupid.logoPath %>">
-
 	<div class="page-content show">
-	<div class="sidebar"></div>
-		<!-- message modal -->
-		<div id="myModal" class="modal fade">
-		  <div class="modal-dialog">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		        <h4 class="modal-title">New Message to <%= profile.escape('username') %></h4>
-		      </div>
+		<img class="logo" src="<%= Kocupid.logoPath %>">
 
-		      <div class="modal-body">
-		      	<form>
-		        	<textarea placeholder="Message..." name="body" class="form-control"></textarea>
-		        </form>
-		      </div>
+		<div class="sidebar"></div>
+			<!-- message modal -->
+			<div id="myModal" class="modal fade">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title">New Message to <%= profile.escape('username') %></h4>
+			      </div>
 
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		        <button type="button" class="send-message btn btn-primary" data-dismiss="modal">Send Message</button>
-		      </div>
-		    </div><!-- /.modal-content -->
-		  </div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
+			      <div class="modal-body">
+			      	<form>
+			        	<textarea placeholder="Message..." name="body" class="form-control"></textarea>
+			        </form>
+			      </div>
 
-		<!-- the visible page is below this line -->
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			        <button type="button" class="send-message btn btn-primary" data-dismiss="modal">Send Message</button>
+			      </div>
+			    </div><!-- /.modal-content -->
+			  </div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
 
-		<div class="actions">
-			<% if (profile.get('id') !== Kocupid.currentProfileId) { %>
-				<button data-toggle="modal" href="#myModal" class="action btn btn-default btn-primary"><span class="glyphicon glyphicon-envelope"></span> Message Fighter</button>
-				<div class="action like-toggle-button"></div>
-				<div class="action bookmark-toggle-button"></div>
-			<% } %>
+			<!-- the visible page is below this line -->
 
-			<% if (profile.get('id') === Kocupid.currentProfileId) { %>
-				<div class="edit">
-					<span class="edit-profile-button glyphicon glyphicon-pencil"></span>
-					<h5>Edit Profile</h5>
-				</div>
-			<% } %>
-		</div>
+			<div class="actions">
+				<% if (profile.get('id') !== Kocupid.currentProfileId) { %>
+					<button data-toggle="modal" href="#myModal" class="action btn btn-default btn-primary"><span class="glyphicon glyphicon-envelope"></span> Message Fighter</button>
+					<div class="action like-toggle-button"></div>
+					<div class="action bookmark-toggle-button"></div>
+				<% } %>
+
+				<% if (profile.get('id') === Kocupid.currentProfileId) { %>
+					<div class="edit">
+						<span class="edit-profile-button glyphicon glyphicon-pencil"></span>
+						<h5>Edit Profile</h5>
+					</div>
+				<% } %>
+			</div>
 
 		<div class="header-info clearfix">
 			<img class="profile-photo" src="<%= profile.escape('photo_url') %>">

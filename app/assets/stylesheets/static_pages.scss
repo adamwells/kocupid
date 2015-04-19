@@ -2,13 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$page-content: rgb(243,245,249);
+
 .page-content {
 	margin: 20px auto;
 	width: 780px;
 	position: relative;
+	background-color: $page-content;
+	padding: 15px;
+	float: right;
 }
 
 .full-content {
 	margin: 0 auto;
-	width: 1200px;
+	width: 975px;
 }
