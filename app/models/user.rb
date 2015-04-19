@@ -32,6 +32,12 @@ class User < ActiveRecord::Base
 	has_many :bookmarkees, through: :bookmarks
 	has_many :bookmarkers, through: :bookmarkings
 
+	has_many :visits, foreign_key: :visitor_id, class_name: 'Visit'
+	has_many :visitings, foreign_key: :visitee_id, class_name: 'Visit'
+
+	has_many :visited_users, through: :visits
+	has_many :visitors, through: :visitings
+
 	has_one :profile, dependent: :destroy
 
 	def self.generate_session_token
