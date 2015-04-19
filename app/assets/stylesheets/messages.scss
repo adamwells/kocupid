@@ -49,6 +49,7 @@ $side-bar: rgb(20,45,105);
 .messages-index-item:hover {
 	background-color: $highlight;
 	color: $text-dark;
+	cursor: pointer;
 }
 
 .close-message-button, .view-message-button, .delete-message-button {
