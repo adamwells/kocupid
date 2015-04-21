@@ -1,4 +1,4 @@
-Kocupid.Views.Sidebar = Backbone.View.extend({
+Kocupid.Views.Sidebar = Backbone.CompositeView.extend({
 	template: JST['_sidebar'],
 	events: {
 		'click .matches' : 'matches',
@@ -7,8 +7,17 @@ Kocupid.Views.Sidebar = Backbone.View.extend({
 		'click .logout' : 'logout'
 	},
 
+	initialize: function () {
+		this.addVisits();
+	},
+
 	matches: function () {
 		window.router.navigate('profiles', { trigger: true });
+	},
+
+	addVisits: function () {
+		var visits = new Kocupid.Views.VisitedPanel();
+		this.addSubview('.visits', visits);	
 	},
 
 	messages: function () {
@@ -33,6 +42,7 @@ Kocupid.Views.Sidebar = Backbone.View.extend({
 	render: function () {
 		var content = this.template();
 		this.$el.html(content);
+		this.attachSubviews();
 		return this;
 	}
 });

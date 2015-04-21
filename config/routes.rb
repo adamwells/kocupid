@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   	resources :likes
     resources :bookmarks
   	resources :messages
+    resources :visits
   end
 end

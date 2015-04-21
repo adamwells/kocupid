@@ -1,0 +1,5 @@
+<% visits.forEach(function(visit) { %>
+	<li class="visits-index-item">
+		<a href="#/profiles/<%= visit.escape('profile_id') %>"><img src="<%= visit.escape('photo_url') %>"></a>
+	</li>
+<% }) %>

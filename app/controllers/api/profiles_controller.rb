@@ -26,6 +26,9 @@ module Api
 			@bookmark = Bookmark.find_by({ bookmarkee_id: @user.id, bookmarker_id: current_user.id })
 			@bookmark_id = @bookmark ? @bookmark.id : nil
 
+			@visit = Visit.find_by({ visitee_id: @user.id, visitor_id: current_user.id })
+			@visit_id = @visit ? @visit.id : nil
+
 			render :show
 		end
 

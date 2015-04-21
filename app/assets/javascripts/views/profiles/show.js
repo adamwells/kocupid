@@ -9,8 +9,15 @@ Kocupid.Views.ProfileShow = Backbone.CompositeView.extend({
 		this.listenTo(this.model, 'sync change', this.render);
 		this.listenTo(this.model, 'sync', this.addLikeButton);
 		this.listenTo(this.model, 'sync', this.addBookmarkButton);
+		this.listenTo(this.model, 'sync', this.createVisit);
 
 		this.addSidebar();
+	},
+
+	createVisit: function () {
+		var visit = new Kocupid.Models.Visit({ id: this.model.escape('visit_id'), visitee_id: this.model.escape('user_id') });
+		debugger
+		visit.save([],{});
 	},
 
 	addSidebar: function () {
