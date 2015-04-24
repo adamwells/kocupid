@@ -23,7 +23,7 @@ BODY_TYPES = ['Tank', 'Flimsy', 'Built', 'Stacked', 'Jacked', 'Yoked']
 
 GENDERS = ['Male', 'Female', 'Other']
 
-User.create!(email: 'rhonda.rousey@strikeforce.net', username: 'rhonda.rousey', password: 'rhondapassword')
+User.create!(email: 'ronda.rousey@strikeforce.net', username: 'rhonda.rousey', password: 'rhondapassword')
 User.create!(email: 'sample@example.com', username: 'brock_lesnar', password: 'password');
 User.create!(email: 'sample@example.com', username: 'bibiano_fernandes', password: 'password');
 User.create!(email: 'sample@example.com', username: 'cain.velasquez', password: 'password');
